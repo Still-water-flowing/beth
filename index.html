@@ -11,401 +11,866 @@
   <meta property="og:title" content="Beth Faria — Dharma Teacher" />
   <meta property="og:description" content="Meditation teachings rooted in the Theravada tradition — offered with warmth, clarity, and an open heart." />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://catarinam.github.io" />
+  <meta property="og:url" content="https://bethfaria.github.io" />
 
-  <!-- Schema.org structured data for Google & AI search -->
+  <!-- Schema.org -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Person",
     "name": "Beth Faria",
     "jobTitle": "Dharma Teacher",
-    "description": "Theravada Buddhist meditation teacher based in Sydney, Australia. Teaching vipassana and mettā practice online and in person for practitioners in Australia and Brazil.",
-    "url": "https://catarinam.github.io",
+    "description": "Theravada Buddhist meditation teacher based in Sydney, Australia.",
+    "url": "https://bethfaria.github.io",
     "knowsLanguage": ["en", "pt-BR"]
   }
   </script>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
 
   <style>
     /* ── Reset ── */
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; }
 
-    /* ── Tokens ── */
+    /* ── Palette: from image 2 ── */
     :root {
-      --green-dark:   #27500A;
-      --green-mid:    #3B6D11;
-      --green:        #639922;
-      --green-light:  #97C459;
-      --green-pale:   #C0DD97;
-      --green-wash:   #EAF3DE;
-      --earth-dark:   #3B3028;
-      --earth-mid:    #5C4A3A;
-      --cream:        #F7F3EC;
-      --warm-grey:    #B4B2A9;
-      --text:         #2C2C2A;
-      --text-sub:     #5F5E5A;
-      --radius:       10px;
-      --font-serif:   Georgia, 'Times New Roman', serif;
-      --font-sans:    -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-      --max:          720px;
+      --areia:        #D3C7AD;   /* warm sand */
+      --areia-light:  #EAE3D4;   /* lighter tint */
+      --azul:         #28374A;   /* deep navy */
+      --azul-light:   #3A4F66;   /* slightly lighter navy */
+      --terra:        #754437;   /* burnt earth / terracotta */
+      --terra-light:  #9A5C4A;   /* lighter terracotta */
+      --verde:        #6B6751;   /* opaque olive green */
+      --verde-light:  #8A866E;   /* lighter olive */
+      --cream:        #F5F0E8;   /* near-white warm */
+      --ink:          #1C2630;   /* darkest text */
     }
 
     /* ── Base ── */
     body {
-      font-family: var(--font-sans);
-      background: var(--cream);
-      color: var(--text);
-      font-size: 16px;
+      font-family: 'DM Sans', -apple-system, sans-serif;
+      background: var(--areia-light);
+      color: var(--ink);
+      font-size: 15px;
       line-height: 1.7;
+      overflow-x: hidden;
     }
 
-    /* ── Nav ── */
+    /* ─────────────────────────────
+       NAV
+    ───────────────────────────── */
     nav {
-      position: sticky; top: 0; z-index: 100;
-      background: var(--cream);
-      border-bottom: 0.5px solid #D3D1C7;
-      padding: 14px 24px;
-      display: flex; justify-content: space-between; align-items: center;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      padding: 28px 36px 0;
+      position: relative;
+      z-index: 10;
+      background: var(--areia);
     }
-    .nav-name {
-      font-size: 16px; font-weight: 500; color: var(--green-mid);
-      text-decoration: none; letter-spacing: 0.02em;
-    }
-    .nav-links { display: flex; gap: 24px; align-items: center; }
-    .nav-links a {
-      font-size: 13px; color: var(--text-sub);
-      text-decoration: none; transition: color 0.2s;
-    }
-    .nav-links a:hover { color: var(--green-mid); }
-
-    /* ── Sections ── */
-    section { padding: 72px 24px; }
-    .inner { max-width: var(--max); margin: 0 auto; }
-
-    /* ── Hero ── */
-    #hero {
-      background: var(--earth-dark);
-      padding: 80px 24px 72px;
-      text-align: center;
-    }
-    .hero-badge {
-      display: inline-block;
-      font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase;
-      color: var(--green-light);
-      border: 0.5px solid var(--green);
-      border-radius: 20px; padding: 4px 16px;
-      margin-bottom: 24px;
-    }
-    #hero h1 {
-      font-family: var(--font-serif);
-      font-size: clamp(28px, 6vw, 44px);
-      font-weight: 400; color: #F7F3EC;
-      line-height: 1.2; margin-bottom: 16px;
-    }
-    #hero p {
-      font-size: 16px; color: var(--warm-grey);
-      max-width: 480px; margin: 0 auto 12px; line-height: 1.8;
-    }
-    #hero .pt { font-size: 14px; color: #888780; font-style: italic; margin-bottom: 36px; }
-    .btn-primary {
-      display: inline-block;
-      background: var(--green);
-      color: var(--green-wash);
+    .nav-logo {
+      font-family: 'Caveat', cursive;
+      font-size: 42px;
+      font-weight: 700;
+      color: var(--azul);
+      line-height: 1;
       text-decoration: none;
-      padding: 12px 32px; border-radius: 6px;
-      font-size: 14px; font-weight: 500;
+      display: block;
+      transform: rotate(-1.5deg);
+    }
+    .nav-logo span { display: block; }
+    .nav-links {
+      display: flex;
+      gap: 32px;
+      padding-top: 10px;
+    }
+    .nav-links a {
+      font-size: 13px;
+      font-weight: 400;
+      color: var(--azul);
+      text-decoration: none;
+      letter-spacing: 0.06em;
+      text-transform: lowercase;
+    }
+    .nav-links a:hover { text-decoration: underline; }
+
+    /* ─────────────────────────────
+       HERO
+    ───────────────────────────── */
+    .hero {
+      background: var(--areia);
+      padding: 20px 36px 0;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0;
+      min-height: 440px;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero-left {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding-bottom: 48px;
+      position: relative;
+      z-index: 2;
+    }
+    .hero-tagline {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: clamp(13px, 2vw, 15px);
+      font-weight: 300;
+      font-style: italic;
+      color: var(--verde);
+      letter-spacing: 0.08em;
+      margin-bottom: 12px;
+      text-transform: lowercase;
+    }
+    .hero-sub {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 13px;
+      font-weight: 300;
+      color: var(--azul);
+      max-width: 280px;
+      line-height: 1.8;
+      margin-top: 20px;
+    }
+    .hero-sub-pt {
+      font-style: italic;
+      color: var(--verde);
+      font-size: 12px;
+      margin-top: 6px;
+    }
+    .hero-cta {
+      margin-top: 28px;
+      display: inline-block;
+      background: var(--azul);
+      color: var(--areia-light);
+      text-decoration: none;
+      padding: 11px 28px;
+      font-size: 12px;
+      letter-spacing: 0.08em;
+      text-transform: lowercase;
+      border: none;
+      cursor: pointer;
+      font-family: 'DM Sans', sans-serif;
       transition: background 0.2s;
     }
-    .btn-primary:hover { background: var(--green-mid); }
-
-    /* Animated lotus */
-    .lotus { margin: 40px auto 0; width: 48px; opacity: 0.3; animation: breathe 4s ease-in-out infinite; }
-    @keyframes breathe { 0%,100%{opacity:0.2;transform:scale(0.97)} 50%{opacity:0.4;transform:scale(1)} }
-
-    /* ── Section headings ── */
-    .section-label {
-      font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase;
-      color: var(--green); font-weight: 500; margin-bottom: 8px;
+    .hero-cta:hover { background: var(--terra); }
+    .hero-right {
+      position: relative;
+      display: flex;
+      align-items: flex-start;
+      justify-content: flex-end;
+      padding-top: 10px;
     }
-    .section-title {
-      font-family: var(--font-serif);
-      font-size: clamp(22px, 4vw, 30px);
-      font-weight: 400; color: var(--text);
-      margin-bottom: 16px; line-height: 1.3;
+    /* Tilted photo frame like Garden+Gather */
+    .hero-frame {
+      width: 88%;
+      aspect-ratio: 4/3;
+      background: var(--verde);
+      position: relative;
+      transform: rotate(1.2deg);
+      overflow: hidden;
+      box-shadow: 6px 8px 32px rgba(40,55,74,0.18);
     }
-    .section-sub {
-      font-size: 15px; color: var(--text-sub);
-      line-height: 1.8; margin-bottom: 32px;
-    }
-
-    /* ── Bio ── */
-    #bio { background: #F7F3EC; }
-    .bio-grid {
-      display: grid;
-      grid-template-columns: 140px 1fr;
-      gap: 32px; align-items: start;
-    }
-    @media (max-width: 540px) { .bio-grid { grid-template-columns: 1fr; } }
-    .bio-avatar {
-      width: 140px; height: 140px; border-radius: 50%;
-      background: var(--green-pale);
+    /* Placeholder — replace with real photo */
+    .hero-frame-inner {
+      width: 100%; height: 100%;
+      background: linear-gradient(145deg, var(--verde) 0%, var(--azul) 100%);
       display: flex; align-items: center; justify-content: center;
-      font-size: 36px; font-weight: 400; color: var(--green-mid);
-      font-family: var(--font-serif); flex-shrink: 0;
-      /* REPLACE: swap background with background-image: url('photo.jpg'); background-size: cover; */
+      flex-direction: column; gap: 8px;
     }
-    .bio-text p { font-size: 15px; color: var(--text-sub); margin-bottom: 14px; line-height: 1.85; }
-    .bio-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 20px; }
-    .tag {
-      font-size: 12px; padding: 4px 12px; border-radius: 20px;
-      background: var(--green-wash); color: var(--green-mid);
-      border: 0.5px solid var(--green-pale);
+    .hero-frame-inner p {
+      font-size: 11px; color: rgba(211,199,173,0.6);
+      text-align: center; padding: 0 20px; line-height: 1.6;
+      font-style: italic;
     }
 
-    /* ── Audio ── */
-    #audio { background: #EFF0E8; }
-    .audio-intro { font-size: 15px; color: var(--text-sub); margin-bottom: 28px; line-height: 1.8; }
+    /* Decorative botanical SVG doodles */
+    .deco { position: absolute; pointer-events: none; }
+    .deco-tl { top: 60px; left: 30px; opacity: 0.25; }
+    .deco-br { bottom: 20px; right: 20px; opacity: 0.2; }
+    .deco-mid { top: 50%; left: 42%; opacity: 0.15; transform: translateY(-50%); }
+
+    /* Vertical rotated text (like "adults & children" in Garden+Gather) */
+    .rotated-text {
+      position: absolute;
+      right: -48px;
+      top: 50%;
+      transform: translateY(-50%) rotate(90deg);
+      font-size: 10px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--verde);
+      white-space: nowrap;
+    }
+
+    /* ─────────────────────────────
+       BLOCK SECTION — Terra (like pink block in G+G)
+    ───────────────────────────── */
+    .block-terra {
+      background: var(--terra);
+      padding: 64px 36px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .block-terra h2 {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: clamp(30px, 6vw, 52px);
+      font-weight: 300;
+      color: var(--areia-light);
+      line-height: 1.2;
+      margin-bottom: 8px;
+    }
+    .block-terra h2 em {
+      font-style: italic;
+      display: block;
+      text-decoration: underline;
+      text-decoration-color: rgba(211,199,173,0.4);
+      text-underline-offset: 6px;
+    }
+    .block-terra p {
+      font-size: 13px;
+      color: rgba(234,227,212,0.75);
+      max-width: 380px;
+      margin: 20px auto 0;
+      line-height: 1.8;
+    }
+    /* Doodle decorations in terra block */
+    .deco-terra-l { position: absolute; left: 20px; top: 50%; transform: translateY(-50%); opacity: 0.2; }
+    .deco-terra-r { position: absolute; right: 20px; top: 50%; transform: translateY(-50%); opacity: 0.2; }
+
+    /* Sign-up pill button like G+G */
+    .pill-btn {
+      display: inline-block;
+      width: 64px; height: 64px;
+      border-radius: 50%;
+      background: var(--azul);
+      color: var(--areia-light);
+      font-size: 10px;
+      text-transform: lowercase;
+      letter-spacing: 0.06em;
+      text-align: center;
+      line-height: 1.3;
+      display: flex; align-items: center; justify-content: center;
+      text-decoration: none;
+      position: absolute;
+      left: 36px; top: 36px;
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 500;
+    }
+    .pill-btn:hover { background: var(--verde); }
+
+    /* ─────────────────────────────
+       SPLIT SECTION — Bio + image (like avocado split in G+G)
+    ───────────────────────────── */
+    .split {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+    .split-left {
+      background: var(--azul);
+      padding: 56px 40px;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 380px;
+    }
+    /* Photo placeholder for bio */
+    .bio-photo {
+      width: 100%; max-width: 300px;
+      aspect-ratio: 3/4;
+      background: linear-gradient(160deg, var(--azul-light) 0%, var(--verde) 100%);
+      display: flex; align-items: center; justify-content: center;
+      flex-direction: column; gap: 10px;
+    }
+    .bio-photo p { font-size: 11px; color: rgba(211,199,173,0.5); text-align: center; padding: 0 16px; font-style: italic; }
+    .split-right {
+      background: var(--areia);
+      padding: 56px 44px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      position: relative;
+    }
+    .section-label {
+      font-size: 10px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--terra);
+      font-weight: 500;
+      margin-bottom: 12px;
+    }
+    .split-right h2 {
+      font-family: 'Caveat', cursive;
+      font-size: 38px;
+      font-weight: 600;
+      color: var(--azul);
+      line-height: 1.1;
+      margin-bottom: 20px;
+    }
+    .split-right p {
+      font-size: 13px;
+      color: var(--verde);
+      line-height: 1.85;
+      margin-bottom: 14px;
+    }
+    .bio-tags {
+      display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px;
+    }
+    .bio-tag {
+      font-size: 11px;
+      padding: 4px 14px;
+      border: 0.5px solid var(--verde);
+      color: var(--verde);
+      border-radius: 0;
+      background: transparent;
+      text-transform: lowercase;
+      letter-spacing: 0.04em;
+    }
+    /* Rotated side label */
+    .side-label {
+      position: absolute;
+      right: -38px; top: 50%;
+      transform: translateY(-50%) rotate(90deg);
+      font-size: 9px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--areia);
+      white-space: nowrap;
+      font-weight: 500;
+    }
+
+    /* ─────────────────────────────
+       AUDIO SECTION — Verde bg
+    ───────────────────────────── */
+    .audio-section {
+      background: var(--verde);
+      padding: 64px 36px;
+      position: relative;
+    }
+    .audio-section .section-label { color: var(--areia); }
+    .audio-section h2 {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: clamp(26px, 4vw, 38px);
+      font-weight: 300;
+      font-style: italic;
+      color: var(--areia-light);
+      margin-bottom: 32px;
+    }
+    .audio-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
     .audio-card {
-      background: var(--cream);
-      border: 0.5px solid #C0DD97;
-      border-radius: var(--radius);
+      background: rgba(40,55,74,0.35);
+      border: 0.5px solid rgba(211,199,173,0.2);
       padding: 20px;
+    }
+    .audio-card h3 {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 17px;
+      font-weight: 400;
+      color: var(--areia-light);
+      margin-bottom: 4px;
+      line-height: 1.4;
+    }
+    .audio-card .meta {
+      font-size: 11px;
+      color: rgba(211,199,173,0.55);
+      margin-bottom: 14px;
+      letter-spacing: 0.04em;
+    }
+    .audio-bar-wrap {
+      background: rgba(211,199,173,0.15);
+      height: 3px;
+      margin-bottom: 12px;
+      position: relative;
+    }
+    .audio-bar-fill {
+      background: var(--areia);
+      width: 35%; height: 100%;
+    }
+    .audio-controls {
+      display: flex; align-items: center; gap: 10px;
+    }
+    .play-btn {
+      width: 32px; height: 32px; border-radius: 50%;
+      background: var(--terra);
+      border: none; cursor: pointer;
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+    }
+    .play-icon {
+      width: 0; height: 0;
+      border-top: 5px solid transparent;
+      border-bottom: 5px solid transparent;
+      border-left: 9px solid var(--areia-light);
+      margin-left: 2px;
+    }
+    .audio-time { font-size: 11px; color: rgba(211,199,173,0.55); }
+    .audio-note {
+      margin-top: 24px;
+      font-size: 12px;
+      color: rgba(211,199,173,0.55);
+      font-style: italic;
+    }
+    .audio-note a { color: var(--areia); }
+
+    /* ─────────────────────────────
+       DANA SECTION — Azul dark (like footer block in G+G)
+    ───────────────────────────── */
+    .dana-section {
+      background: var(--azul);
+      padding: 72px 36px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+      align-items: center;
+      position: relative;
+    }
+    .dana-left .section-label { color: var(--terra-light); }
+    .dana-left h2 {
+      font-family: 'Caveat', cursive;
+      font-size: 44px;
+      font-weight: 600;
+      color: var(--areia-light);
+      line-height: 1.1;
       margin-bottom: 16px;
     }
-    .audio-card h3 { font-size: 15px; font-weight: 500; color: var(--text); margin-bottom: 4px; }
-    .audio-card .meta { font-size: 12px; color: var(--green); margin-bottom: 14px; }
-    /* SoundCloud embed sits here — styled to fill width */
-    .audio-card iframe { width: 100%; border: none; border-radius: 6px; }
-    .audio-note {
-      font-size: 12px; color: var(--text-sub);
-      margin-top: 20px; padding-top: 16px;
-      border-top: 0.5px solid #D3D1C7;
+    .dana-left p {
+      font-size: 13px;
+      color: rgba(211,199,173,0.65);
+      line-height: 1.85;
+      margin-bottom: 8px;
     }
-    .audio-note a { color: var(--green); text-decoration: none; }
-
-    /* ── Donate ── */
-    #donate { background: var(--earth-dark); text-align: center; }
-    #donate .section-label { color: var(--green-light); }
-    #donate .section-title { color: #F7F3EC; }
-    #donate .section-sub { color: var(--warm-grey); }
-    #donate .pt { font-size: 14px; color: #888780; font-style: italic; margin-bottom: 32px; }
-    .donate-options { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; margin-bottom: 28px; }
-    .donate-amount {
-      padding: 10px 20px; border: 0.5px solid var(--green);
-      color: var(--green-pale); background: transparent;
-      border-radius: 6px; font-size: 14px; cursor: pointer;
-      transition: all 0.2s; font-family: var(--font-sans);
+    .dana-left .pt {
+      font-style: italic;
+      font-size: 12px;
+      color: rgba(211,199,173,0.45);
     }
-    .donate-amount:hover, .donate-amount.active {
-      background: var(--green); color: var(--green-wash);
+    .dana-right {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
     }
-    .donate-buttons { display: flex; flex-direction: column; align-items: center; gap: 12px; }
-    .btn-kofi {
-      display: inline-flex; align-items: center; gap: 8px;
-      background: #FF5E5B; color: #fff;
-      text-decoration: none; padding: 12px 32px;
-      border-radius: 6px; font-size: 14px; font-weight: 500;
+    .dana-amounts {
+      display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 8px;
+    }
+    .dana-amt {
+      padding: 9px 20px;
+      border: 0.5px solid rgba(211,199,173,0.35);
+      color: var(--areia);
+      background: transparent;
+      font-size: 13px;
+      cursor: pointer;
+      font-family: 'DM Sans', sans-serif;
+      transition: all 0.2s;
+    }
+    .dana-amt:hover, .dana-amt.active {
+      background: var(--terra);
+      border-color: var(--terra);
+    }
+    .btn-stripe {
+      display: block;
+      background: var(--terra);
+      color: var(--areia-light);
+      text-align: center;
+      text-decoration: none;
+      padding: 14px 28px;
+      font-size: 13px;
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+      text-transform: lowercase;
+      border: none;
+      cursor: pointer;
       transition: background 0.2s;
     }
-    .btn-kofi:hover { background: #e04e4b; }
-    .donate-note { font-size: 12px; color: #888780; margin-top: 8px; }
-
-    /* ── Footer ── */
-    footer {
-      background: #2C2520;
-      padding: 32px 24px;
-      display: flex; justify-content: space-between; align-items: center;
-      flex-wrap: wrap; gap: 16px;
+    .btn-stripe:hover { background: var(--terra-light); }
+    .btn-paypal {
+      display: flex; align-items: center; justify-content: center; gap: 8px;
+      background: transparent;
+      border: 0.5px solid rgba(211,199,173,0.35);
+      color: var(--areia);
+      text-align: center;
+      text-decoration: none;
+      padding: 12px 28px;
+      font-size: 13px;
+      font-family: 'DM Sans', sans-serif;
+      cursor: pointer;
+      transition: all 0.2s;
     }
-    footer p { font-size: 12px; color: #888780; }
-    .footer-links { display: flex; gap: 20px; }
-    .footer-links a { font-size: 12px; color: #888780; text-decoration: none; }
-    .footer-links a:hover { color: var(--green-pale); }
+    .btn-paypal:hover { border-color: var(--areia); }
+    .dana-note {
+      font-size: 11px;
+      color: rgba(211,199,173,0.35);
+      text-align: center;
+      line-height: 1.6;
+    }
 
-    /* ── Scroll fade-in ── */
-    .fade-in { opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease, transform 0.6s ease; }
+    /* ─────────────────────────────
+       FOOTER — Cream band then Azul
+    ───────────────────────────── */
+    .footer-band {
+      background: var(--areia-light);
+      padding: 40px 36px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .footer-name {
+      font-family: 'Caveat', cursive;
+      font-size: 52px;
+      font-weight: 700;
+      color: var(--azul);
+      text-align: center;
+      letter-spacing: 0.01em;
+    }
+    footer {
+      background: var(--azul);
+      padding: 28px 36px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      text-align: center;
+    }
+    footer h4 {
+      font-size: 10px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--areia);
+      margin-bottom: 10px;
+      font-weight: 500;
+    }
+    footer a, footer p {
+      display: block;
+      font-size: 12px;
+      color: rgba(211,199,173,0.55);
+      text-decoration: none;
+      line-height: 1.8;
+    }
+    footer a:hover { color: var(--areia); }
+    .footer-dividers {
+      border-left: 0.5px solid rgba(211,199,173,0.15);
+      border-right: 0.5px solid rgba(211,199,173,0.15);
+    }
+
+    /* ─────────────────────────────
+       RESPONSIVE
+    ───────────────────────────── */
+    @media (max-width: 640px) {
+      nav { flex-direction: column; gap: 12px; padding: 20px 20px 0; }
+      .nav-logo { font-size: 34px; }
+      .hero { grid-template-columns: 1fr; padding: 16px 20px 0; }
+      .hero-right { justify-content: center; padding-bottom: 32px; }
+      .hero-frame { width: 100%; transform: rotate(0.8deg); }
+      .rotated-text { display: none; }
+      .block-terra { padding: 48px 20px; }
+      .split { grid-template-columns: 1fr; }
+      .split-left { min-height: 260px; }
+      .side-label { display: none; }
+      .audio-grid { grid-template-columns: 1fr; }
+      .dana-section { grid-template-columns: 1fr; padding: 48px 20px; }
+      footer { grid-template-columns: 1fr; }
+      .footer-dividers { border: none; border-top: 0.5px solid rgba(211,199,173,0.15); border-bottom: 0.5px solid rgba(211,199,173,0.15); padding: 20px 0; }
+    }
+
+    /* ─────────────────────────────
+       ANIMATIONS
+    ───────────────────────────── */
+    .fade-in { opacity: 0; transform: translateY(18px); transition: opacity 0.65s ease, transform 0.65s ease; }
     .fade-in.visible { opacity: 1; transform: translateY(0); }
   </style>
 </head>
 
 <body>
 
-  <!-- ── Navigation ── -->
+  <!-- ── NAV ── -->
   <nav>
-    <a href="#" class="nav-name">Beth Faria</a>
+    <a href="#" class="nav-logo">
+      <span>Beth</span>
+      <span>Faria</span>
+    </a>
     <div class="nav-links">
-      <a href="#bio">About</a>
-      <a href="#audio">Teachings</a>
-      <a href="#donate">Donate</a>
-      <!-- OPTIONAL: add WhatsApp link for Brazilian community -->
-      <!-- <a href="https://wa.me/61XXXXXXXXX" target="_blank">WhatsApp</a> -->
+      <a href="#bio">about</a>
+      <a href="#audio">teachings</a>
+      <a href="#dana">donate</a>
     </div>
   </nav>
 
-  <!-- ── Hero ── -->
-  <section id="hero">
-    <div class="inner fade-in">
-      <div class="hero-badge">Theravada · Vipassana · Sydney &amp; Online</div>
-      <h1>Ancient wisdom<br>for a modern life</h1>
-      <p>Meditation teachings rooted in the Theravada tradition — offered with warmth, clarity, and an open heart.</p>
-      <p class="pt">Ensinamentos de meditação enraizados na tradição Theravada — oferecidos com calor e clareza.</p>
-      <a href="#audio" class="btn-primary">Listen to a teaching ↓</a>
-      <!-- Lotus SVG animation -->
-      <svg class="lotus" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-        <ellipse cx="26" cy="36" rx="6" ry="10" fill="#C0DD97" opacity="0.7"/>
-        <ellipse cx="26" cy="36" rx="6" ry="10" fill="#C0DD97" opacity="0.7" transform="rotate(45 26 36)"/>
-        <ellipse cx="26" cy="36" rx="6" ry="10" fill="#C0DD97" opacity="0.7" transform="rotate(90 26 36)"/>
-        <ellipse cx="26" cy="36" rx="6" ry="10" fill="#C0DD97" opacity="0.7" transform="rotate(135 26 36)"/>
-        <ellipse cx="26" cy="36" rx="6" ry="10" fill="#C0DD97" opacity="0.7" transform="rotate(180 26 36)"/>
-        <ellipse cx="26" cy="36" rx="6" ry="10" fill="#C0DD97" opacity="0.7" transform="rotate(225 26 36)"/>
-        <ellipse cx="26" cy="36" rx="6" ry="10" fill="#C0DD97" opacity="0.7" transform="rotate(270 26 36)"/>
-        <ellipse cx="26" cy="36" rx="6" ry="10" fill="#C0DD97" opacity="0.7" transform="rotate(315 26 36)"/>
-        <circle cx="26" cy="26" r="5" fill="#EAF3DE" opacity="0.9"/>
-      </svg>
+  <!-- ── HERO ── -->
+  <section class="hero" aria-label="Introduction">
+
+    <!-- Botanical doodle — top left -->
+    <svg class="deco deco-tl" width="60" height="120" viewBox="0 0 60 120" fill="none" aria-hidden="true">
+      <line x1="30" y1="120" x2="30" y2="10" stroke="#28374A" stroke-width="1"/>
+      <ellipse cx="30" cy="10" rx="10" ry="16" stroke="#28374A" stroke-width="1" fill="none"/>
+      <ellipse cx="16" cy="40" rx="8" ry="13" stroke="#28374A" stroke-width="1" fill="none" transform="rotate(-25 16 40)"/>
+      <ellipse cx="44" cy="55" rx="8" ry="13" stroke="#28374A" stroke-width="1" fill="none" transform="rotate(25 44 55)"/>
+      <ellipse cx="16" cy="75" rx="7" ry="11" stroke="#28374A" stroke-width="1" fill="none" transform="rotate(-20 16 75)"/>
+    </svg>
+
+    <div class="hero-left fade-in">
+      <div class="hero-tagline">theravada · vipassana · sydney &amp; online</div>
+      <p class="hero-sub">
+        Meditation teachings rooted in the ancient tradition — offered with warmth, clarity, and an open heart to practitioners in Australia, Brazil, and beyond.
+      </p>
+      <p class="hero-sub-pt">Ensinamentos oferecidos com calor e coração aberto.</p>
+      <a href="#audio" class="hero-cta">listen to a teaching ↓</a>
     </div>
+
+    <div class="hero-right fade-in">
+      <div class="hero-frame">
+        <div class="hero-frame-inner">
+          <!--
+            ✏️  ADD PHOTO:
+            Replace this entire div with:
+            <img src="hero-photo.jpg" alt="Beth Faria in meditation" style="width:100%;height:100%;object-fit:cover;">
+          -->
+          <svg width="48" height="48" viewBox="0 0 52 52" fill="none" aria-hidden="true">
+            <ellipse cx="26" cy="36" rx="6" ry="10" fill="#D3C7AD" opacity="0.4"/>
+            <ellipse cx="26" cy="36" rx="6" ry="10" fill="#D3C7AD" opacity="0.4" transform="rotate(60 26 36)"/>
+            <ellipse cx="26" cy="36" rx="6" ry="10" fill="#D3C7AD" opacity="0.4" transform="rotate(120 26 36)"/>
+            <ellipse cx="26" cy="36" rx="6" ry="10" fill="#D3C7AD" opacity="0.4" transform="rotate(180 26 36)"/>
+            <ellipse cx="26" cy="36" rx="6" ry="10" fill="#D3C7AD" opacity="0.4" transform="rotate(240 26 36)"/>
+            <ellipse cx="26" cy="36" rx="6" ry="10" fill="#D3C7AD" opacity="0.4" transform="rotate(300 26 36)"/>
+            <circle cx="26" cy="26" r="5" fill="#D3C7AD" opacity="0.6"/>
+          </svg>
+          <p>add a photograph of Beth here — portrait or nature scene</p>
+        </div>
+      </div>
+      <span class="rotated-text">dharma teacher</span>
+    </div>
+
+    <!-- Bottom-right doodle -->
+    <svg class="deco deco-br" width="48" height="80" viewBox="0 0 48 80" fill="none" aria-hidden="true">
+      <line x1="24" y1="80" x2="24" y2="30" stroke="#28374A" stroke-width="1"/>
+      <circle cx="24" cy="20" r="10" stroke="#28374A" stroke-width="1" fill="none"/>
+      <circle cx="24" cy="20" r="4" stroke="#28374A" stroke-width="0.5" fill="none"/>
+      <line x1="24" y1="10" x2="24" y2="4" stroke="#28374A" stroke-width="1"/>
+      <line x1="15" y1="20" x2="10" y2="20" stroke="#28374A" stroke-width="1"/>
+      <line x1="33" y1="20" x2="38" y2="20" stroke="#28374A" stroke-width="1"/>
+    </svg>
+
   </section>
 
-  <!-- ── Bio ── -->
-  <section id="bio">
-    <div class="inner fade-in">
-      <div class="section-label">About Beth</div>
-      <div class="bio-grid">
+  <!-- ── TERRA BLOCK (like the pink "workshops" block in G+G) ── -->
+  <div class="block-terra fade-in" aria-label="Teachings intro">
 
-        <div class="bio-avatar" aria-label="Beth Faria photo">
-          BF
-          <!--
-            TO ADD A REAL PHOTO:
-            1. Upload photo.jpg to your GitHub repo (drag and drop into the file list)
-            2. Replace the div above with:
-            <img src="photo.jpg" alt="Beth Faria" style="width:140px;height:140px;border-radius:50%;object-fit:cover;">
-          -->
-        </div>
+    <!-- Small circular link top-left -->
+    <a href="#dana" class="pill-btn">dana ↗</a>
 
-        <div class="bio-text">
-          <div class="section-title">Beth Faria</div>
+    <!-- Decorative lotus left -->
+    <svg class="deco-terra-l" width="36" height="100" viewBox="0 0 36 100" fill="none" aria-hidden="true">
+      <line x1="18" y1="100" x2="18" y2="20" stroke="#EAE3D4" stroke-width="1"/>
+      <ellipse cx="18" cy="12" rx="8" ry="12" fill="none" stroke="#EAE3D4" stroke-width="1"/>
+      <ellipse cx="6" cy="40" rx="6" ry="10" fill="none" stroke="#EAE3D4" stroke-width="1" transform="rotate(-20 6 40)"/>
+      <ellipse cx="30" cy="55" rx="6" ry="10" fill="none" stroke="#EAE3D4" stroke-width="1" transform="rotate(20 30 55)"/>
+    </svg>
 
-          <!--
-            ✏️  EDIT THIS — replace with Beth's real bio
-          -->
-          <p>Beth Faria has practised and taught in the Theravada tradition for over two decades, studying with teachers across Southeast Asia, Australia, and Brazil. Her teaching weaves together the precision of the Pali canon with a warm, embodied presence — making the path accessible to everyone who arrives.</p>
-          <p>She offers retreats and courses in Sydney and online for practitioners in Brazil, Australia, and beyond. All teachings are offered in English and Portuguese.</p>
-          <p><em>Beth também ensina em português — para praticantes no Brasil e em Portugal.</em></p>
+    <h2>
+      meditation<br>
+      <em>and dharma</em><br>
+      for all beings
+    </h2>
+    <p>Teachings in English and Portuguese · Online and in Sydney · Open to all</p>
 
-          <div class="bio-tags">
-            <span class="tag">Vipassana</span>
-            <span class="tag">Mettā</span>
-            <span class="tag">Theravada</span>
-            <span class="tag">Sydney, Australia</span>
-            <span class="tag">Online retreats</span>
-            <span class="tag">English · Português</span>
-          </div>
-        </div>
+    <!-- Decorative right -->
+    <svg class="deco-terra-r" width="36" height="100" viewBox="0 0 36 100" fill="none" aria-hidden="true">
+      <line x1="18" y1="100" x2="18" y2="20" stroke="#EAE3D4" stroke-width="1"/>
+      <ellipse cx="18" cy="12" rx="8" ry="12" fill="none" stroke="#EAE3D4" stroke-width="1"/>
+      <ellipse cx="6" cy="45" rx="6" ry="10" fill="none" stroke="#EAE3D4" stroke-width="1" transform="rotate(-20 6 45)"/>
+      <ellipse cx="30" cy="60" rx="6" ry="10" fill="none" stroke="#EAE3D4" stroke-width="1" transform="rotate(20 30 60)"/>
+    </svg>
 
+  </div>
+
+  <!-- ── SPLIT — Bio (like avocado / text split in G+G) ── -->
+  <div class="split" id="bio" aria-label="About Beth">
+
+    <div class="split-left">
+      <div class="bio-photo">
+        <!--
+          ✏️  ADD PHOTO:
+          Replace entire bio-photo div with:
+          <img src="beth-portrait.jpg" alt="Beth Faria" style="width:100%;max-width:300px;height:400px;object-fit:cover;">
+        -->
+        <svg width="48" height="48" viewBox="0 0 52 52" fill="none" aria-hidden="true">
+          <ellipse cx="26" cy="36" rx="6" ry="10" fill="#D3C7AD" opacity="0.3"/>
+          <ellipse cx="26" cy="36" rx="6" ry="10" fill="#D3C7AD" opacity="0.3" transform="rotate(72 26 36)"/>
+          <ellipse cx="26" cy="36" rx="6" ry="10" fill="#D3C7AD" opacity="0.3" transform="rotate(144 26 36)"/>
+          <ellipse cx="26" cy="36" rx="6" ry="10" fill="#D3C7AD" opacity="0.3" transform="rotate(216 26 36)"/>
+          <ellipse cx="26" cy="36" rx="6" ry="10" fill="#D3C7AD" opacity="0.3" transform="rotate(288 26 36)"/>
+          <circle cx="26" cy="26" r="5" fill="#D3C7AD" opacity="0.5"/>
+        </svg>
+        <p>add portrait photo here</p>
+      </div>
+      <span class="side-label">theravada tradition</span>
+    </div>
+
+    <div class="split-right fade-in">
+      <div class="section-label">about beth</div>
+      <h2>practitioner,<br>teacher,<br>traveller of<br>the path</h2>
+
+      <!--
+        ✏️  EDIT: replace with Beth's real biography
+      -->
+      <p>Elizabeth Faria has offered Insight Dialogue and silent meditation retreats in Brazil, China, Europe, and Australia since 2013. She has studied with Gregory Kramer and the Insight Dialogue Teaching Community since 2008. </p>
+      <p>She began practicing vipassana on long retreats in 1996, taking a two-year break from work to dedicate time to meditation practice in India, the US, Australia, and Thailand. </p>
+      <p>Elizabeth is a graduate of the Australian Association of Buddhist Counsellors and Psychotherapists Professional Training Course in Buddhism and Psychotherapy. </p>
+      <p>She has worked as a psychotherapist and psychologist for more than 30 years and has long been interested in the integration of the Buddhadharma with neuroscience and psychotherapy. Elizabeth lives in New South Wales, Australia.</p>
+      <p><em>Beth também ensina em português — para praticantes no Brasil e em Portugal.</em></p>
+
+      <div class="bio-tags">
+        <span class="bio-tag">vipassana</span>
+        <span class="bio-tag">mettā</span>
+        <span class="bio-tag">theravada</span>
+        <span class="bio-tag">sydney</span>
+        <span class="bio-tag">en · pt</span>
       </div>
     </div>
-  </section>
 
-  <!-- ── Audio ── -->
-  <section id="audio">
-    <div class="inner fade-in">
-      <div class="section-label">Teachings</div>
-      <div class="section-title">Listen to a dharma talk</div>
-      <p class="audio-intro">Recorded talks from retreats and sessions — offered freely in the spirit of dana. New talks are added regularly on SoundCloud.</p>
+  </div>
 
-      <!-- ── AUDIO CARD 1 ── -->
+  <!-- ── AUDIO ── -->
+  <section class="audio-section fade-in" id="audio" aria-label="Dharma talks">
+    <div class="section-label">teachings</div>
+    <h2>Listen to a dharma talk</h2>
+
+    <div class="audio-grid">
+
+      <!-- CARD 1 -->
       <div class="audio-card">
         <h3>Breathing into awareness — guided vipassana</h3>
         <p class="meta">Beth Faria · Sydney Sangha · 44 min</p>
-
         <!--
-          ✏️  REPLACE THIS with your real SoundCloud embed:
-          1. Go to soundcloud.com, open your track
-          2. Click Share → Embed
-          3. Copy the <iframe> code and paste it here, replacing the placeholder below
+          ✏️  REPLACE with real SoundCloud embed:
+          Go to soundcloud.com → your track → Share → Embed → copy iframe → paste here
         -->
-       <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay; encrypted-media" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%253Atracks%253A2384694735&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
-        <div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/pause_listendeeply" title="Pause_listendeeply" target="_blank" style="color: #cccccc; text-decoration: none;">Pause_listendeeply</a> · <a href="https://soundcloud.com/pause_listendeeply/meditation-260322" title="Meditation 260322" target="_blank" style="color: #cccccc; text-decoration: none;">Meditation 260322</a></div>
+        <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay; encrypted-media" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%253Atracks%253A2384694735&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true">
+        </iframe>
+        <div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;">
+          <a href="https://soundcloud.com/pause_listendeeply" title="Pause_listendeeply" target="_blank" style="color: #cccccc; text-decoration: none;">Pause_listendeeply</a>
+          · <a href="https://soundcloud.com/pause_listendeeply/meditation-260322" title="Meditation 260322" target="_blank" style="color: #cccccc; text-decoration: none;">Meditation 260322</a></div>
       </div>
 
-      <!-- ── AUDIO CARD 2 — duplicate and add more talks as needed ── -->
+      <!-- CARD 2 -->
       <div class="audio-card">
-        <h3>Mettā — loving-kindness practice</h3>
+        <h3>Mettā — loving-kindness in practice</h3>
         <p class="meta">Beth Faria · Online session · 32 min</p>
+        <!--
+          ✏️  REPLACE with second SoundCloud embed
+        -->
         <iframe
-          src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/bethfaria/your-second-track&color=%23639922&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&show_teaser=false"
-          height="166"
+          src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/bethfaria/your-second-track&color=%23D3C7AD&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&show_teaser=false"
+          height="80"
+          width="100%"
           scrolling="no"
           allow="autoplay"
-          title="Beth Faria mettā talk — SoundCloud player">
+          style="border:none;display:block"
+          title="Beth Faria mettā talk">
         </iframe>
       </div>
 
-      <p class="audio-note">
-        More talks available on
-        <a href="https://soundcloud.com/pause_listendeeply" target="_blank" rel="noopener">SoundCloud ↗</a>
-        — follow to receive new recordings.
-      </p>
     </div>
+
+    <p class="audio-note">
+      More talks on
+      <a href="https://soundcloud.com/bethfaria" target="_blank" rel="noopener">SoundCloud ↗</a>
+      — updated regularly.
+    </p>
   </section>
 
-  <!-- ── Donate ── -->
-  <section id="donate">
-    <div class="inner fade-in">
-      <div class="section-label">Dana</div>
-      <div class="section-title">The dharma is offered freely</div>
-      <p class="section-sub">These teachings are given in the spirit of dana — the ancient practice of generosity. If you have received something of value, your support helps sustain the ongoing sharing of the path.</p>
-      <p class="pt">Os ensinamentos são oferecidos no espírito do dana. Se você recebeu algo de valor, seu apoio sustenta o compartilhamento do caminho.</p>
+  <!-- ── DANA ── -->
+  <section class="dana-section fade-in" id="dana" aria-label="Donate">
 
-      <!-- Suggested amounts — visual only, Ko-fi sets the real amount -->
-      <div class="donate-options" aria-label="Suggested donation amounts">
-        <button class="donate-amount" onclick="selectAmount(this)">A$10</button>
-        <button class="donate-amount active" onclick="selectAmount(this)">A$25</button>
-        <button class="donate-amount" onclick="selectAmount(this)">A$50</button>
-        <button class="donate-amount" onclick="selectAmount(this)">A$100</button>
-        <button class="donate-amount" onclick="selectAmount(this)">Other</button>
-      </div>
-
-      <div class="donate-buttons">
-        <!--
-          ✏️  REPLACE href below with your real Ko-fi URL
-          e.g. https://ko-fi.com/bethfaria
-          Ko-fi lets donors choose any amount and pay via card or PayPal
-        -->
-        <a href="https://ko-fi.com/C3P325E4YM" target="_blank" rel="noopener" class="btn-kofi">
-          ☕ Offer dana via Ko-fi
-        </a>
-        <p class="donate-note">Secure payment via Ko-fi · Credit card &amp; PayPal accepted · AUD, BRL, USD</p>
-      </div>
+    <div class="dana-left">
+      <div class="section-label">dana · generosity</div>
+      <h2>the dharma<br>is offered<br>freely</h2>
+      <p>These teachings are given in the spirit of dana — the ancient practice of generosity. If you have received something of value, your support sustains the path.</p>
+      <p class="pt">Os ensinamentos são oferecidos no espírito do dana. Seu apoio sustenta o caminho.</p>
     </div>
-  </section>
 
-  <!-- ── Footer ── -->
-  <footer>
-    <p>© 2026 Beth Faria · Sydney, Australia</p>
-    <div class="footer-links">
+    <div class="dana-right">
+      <div class="dana-amounts">
+        <button class="dana-amt" onclick="selectAmt(this)">A$10</button>
+        <button class="dana-amt active" onclick="selectAmt(this)">A$25</button>
+        <button class="dana-amt" onclick="selectAmt(this)">A$50</button>
+        <button class="dana-amt" onclick="selectAmt(this)">A$100</button>
+        <button class="dana-amt" onclick="selectAmt(this)">other</button>
+      </div>
+
       <!--
-        ✏️  Replace # with real URLs once accounts are set up
+        ✏️  STRIPE: replace href with your Stripe Payment Link
+        Get it at: dashboard.stripe.com → Payment Links → Create
+        Set product name "Dana", allow custom amount, currency AUD
       -->
-      <a href="https://soundcloud.com/bethfaria" target="_blank" rel="noopener">SoundCloud</a>
+      <a href="https://buy.stripe.com/YOUR_LINK_HERE" target="_blank" rel="noopener" class="btn-stripe">
+        ♡ &nbsp; offer dana by card
+      </a>
+
+      <!--
+        ✏️  PAYPAL: replace value="beth@email.com" with Beth's PayPal email
+      -->
+      <form action="https://www.paypal.com/donate" method="post" target="_blank">
+        <input type="hidden" name="business" value="beth@email.com" />
+        <input type="hidden" name="currency_code" value="AUD" />
+        <input type="hidden" name="item_name" value="Dana — dharma teaching offering" />
+        <input type="hidden" name="no_recurring" value="0" />
+        <button type="submit" class="btn-paypal">pay with paypal</button>
+      </form>
+
+      <p class="dana-note">Secure payment · AUD, BRL, USD, HKD · Credit cards accepted</p>
+    </div>
+
+  </section>
+
+  <!-- ── FOOTER NAME BAND (like G+G cream footer) ── -->
+  <div class="footer-band">
+    <div class="footer-name">Beth Faria</div>
+  </div>
+
+  <!-- ── FOOTER ── -->
+  <footer>
+    <div>
+      <h4>find her</h4>
+      <p>Sydney, Australia</p>
       <a href="https://instagram.com/bethfaria" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://soundcloud.com/bethfaria" target="_blank" rel="noopener">SoundCloud</a>
+    </div>
+    <div class="footer-dividers">
+      <h4>connect</h4>
+      <a href="mailto:hello@bethfaria.com">hello@bethfaria.com</a>
       <a href="https://wa.me/61XXXXXXXXX" target="_blank" rel="noopener">WhatsApp</a>
-      <a href="mailto:hello@bethfaria.com">Contact</a>
+    </div>
+    <div>
+      <h4>follow</h4>
+      <a href="#audio">teachings</a>
+      <a href="#dana">donate</a>
+      <a href="#bio">about</a>
     </div>
   </footer>
 
   <script>
-    /* Donation amount toggle */
-    function selectAmount(btn) {
-      document.querySelectorAll('.donate-amount').forEach(b => b.classList.remove('active'));
+    /* Dana amount toggle */
+    function selectAmt(btn) {
+      document.querySelectorAll('.dana-amt').forEach(b => b.classList.remove('active'));
       btn.classList.add('active');
     }
 
     /* Scroll fade-in */
-    const observer = new IntersectionObserver(entries => {
+    const io = new IntersectionObserver(entries => {
       entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
-    }, { threshold: 0.12 });
-    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.fade-in').forEach(el => io.observe(el));
   </script>
 
 </body>
