@@ -1,878 +1,481 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Beth Faria — Dharma Teacher | Vipassana & Theravada</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Beth Faria — Dharma Teacher | Vipassana &amp; Theravada</title>
 
-  <!-- SEO -->
-  <meta name="description" content="Beth Faria teaches meditation and dharma in the Theravada tradition. Retreats in Sydney, online sessions for Brazil. English and Portuguese." />
-  <meta name="keywords" content="Beth Faria, dharma teacher, vipassana, Theravada, meditation Sydney, meditação, retiro online Brasil" />
-  <meta property="og:title" content="Beth Faria — Dharma Teacher" />
-  <meta property="og:description" content="Meditation teachings rooted in the Theravada tradition — offered with warmth, clarity, and an open heart." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://bethfaria.github.io" />
+ <!-- SEO -->
+<meta name="description" content="Beth Faria teaches meditation and dharma in the Theravada tradition. Retreats in Sydney, online sessions for Brazil. English and Portuguese.">
+ <meta name="keywords" content="Beth Faria, dharma teacher, vipassana, Theravada, meditation Sydney, meditação, retiro online Brasil" />
+<meta property="og:title" content="Beth Faria — Dharma Teacher">
+<meta property="og:description" content="Meditation teachings rooted in the Theravada tradition — offered with warmth, clarity, and an open heart.">
+<meta property="og:type" content="website">
 
-  <!-- Schema.org -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "Beth Faria",
-    "jobTitle": "Dharma Teacher",
-    "description": "Theravada Buddhist meditation teacher based in Sydney, Australia.",
-    "url": "https://bethfaria.github.io",
-    "knowsLanguage": ["en", "pt-BR"]
-  }
-  </script>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@0,400;0,500;0,600;1,400&display=swap">
+<style>
+:root{
+  --bg:#F6F6F3; /* Main page background (About and Audio sections) */
+  --bg2:#EFE6DF; /* Support section and footer background */
+  --hero:#0B1D1F; /* Top hero section background */
+  --hero-ink:#EAEAE6;/* Text colour of the hero headline */
+  --text:#86675A; /* Body text, footer links and text typed into form fields */
+  --heading:#A26C58; /*  */
+  --label:#6E534B; /*  */
+  --nav:#EFE6DF;/*  */
+  --accent:#A26C58; /*  */
+  --accent-ink:#FFFFFF; /*  */
+  --rule:#CFB5A6; /*  */
+  --field:#FFFFFF; /*  */
+  --field-line:#D0C5BA;/*  */
+  box-sizing:border-box; padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#1D1B19; --bg2:#262321; --text:#CDB8AD; --heading:#D49A85; --label:#CDB8AD; --nav:#B8B3A6;
+  --accent:#D49A85; --accent-ink:#1D1B19; --rule:#6E534B; --field:#1D1B19; --field-line:#4A403A;}}
+:root[data-theme="dark"]{
+  --bg:#1D1B19; --bg2:#262321; --text:#CDB8AD; --heading:#D49A85; --label:#CDB8AD; --nav:#B8B3A6;
+  --accent:#D49A85; --accent-ink:#1D1B19; --rule:#6E534B; --field:#1D1B19; --field-line:#4A403A;}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-behavior:smooth;scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--text);font:400 1.05rem/1.75 Montserrat,system-ui,sans-serif}
+h1,h2,h3,.btn,label{font-family:"Bebas Neue",Impact,"Arial Narrow",sans-serif;font-weight:400;text-transform:uppercase;letter-spacing:.03em}
+h1{font-size:clamp(2.6rem,7vw,4.6rem);line-height:1.05;margin:0;max-width:16ch;color:var(--hero-ink)}
+h2{font-size:clamp(2rem,4.5vw,2.8rem);line-height:1.1;margin:0 0 1.5rem;color:var(--heading)}
+h2::after{content:"";display:block;width:128px;height:4px;background:var(--rule);margin-top:.7rem}
+.center{text-align:center}.center h2::after{margin-left:auto;margin-right:auto}
+p{margin:0 0 1.1rem}
+a{color:inherit}
+section{padding:5rem 1.5rem}
+.wrap{max-width:1040px;margin:0 auto}
+.btn{display:inline-block;padding:.65rem 1.6rem;background:var(--accent);color:var(--accent-ink);text-decoration:none;font-size:1.25rem;border:0;border-radius:3px;cursor:pointer;line-height:1.4}
+.btn:hover{opacity:.88}
 
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+#home{background:var(--hero);min-height:70vh;display:flex;align-items:center;text-align:center}
+#home .wrap{display:flex;flex-direction:column;align-items:center;gap:2rem}
 
-  <style>
-    /* ── Reset ── */
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; }
+.split{display:grid;grid-template-columns:1fr 1fr;gap:3.5rem;align-items:center}
+.img{aspect-ratio:4/5;border-radius:3px;background:linear-gradient(135deg,var(--rule),var(--bg2));display:flex;align-items:center;justify-content:center;font-size:.9rem;opacity:.9}
 
-    /* ── Palette: from image 2 ── */
-    :root {
-      --areia:        #D6CCC2;   /* warm sand */
-      --areia-light:  #D6CCC2;   /* lighter tint */
-      --azul:         #D5BDAF;   /* deep navy */
-      --azul-light:   #AC7763;   /* slightly lighter navy */
-      --terra:        #D5BDAF;   /* burnt earth / terracotta */
-      --terra-light:  #D5BDAF;   /* lighter terracotta */
-      --verde:        #DBEAFE;   /* opaque olive green */
-      --verde-light:  #DBEAFE;   /* lighter olive */
-      --cream:        #F5F0E8;   /* near-white warm */
-      --ink:          #AC7763;   /* text */
-    }
+.section-label{font-family:Montserrat,sans-serif;font-size:.72rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--label);margin-bottom:.8rem}
+.fade-in{opacity:0;transform:translateY(18px);transition:opacity .65s ease,transform .65s ease}
+.fade-in.visible{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.fade-in{opacity:1;transform:none;transition:none}}
 
-    /* ── Base ── */
-    body {
-      font-family: 'DM Sans', -apple-system, sans-serif;
-      background: var(--areia-light);
-      color: var(--ink);
-      font-size: 15px;
-      line-height: 1.7;
-      overflow-x: hidden;
-    }
+/* AUDIO: two cards side by side */
+.audio-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.audio-card{background:var(--bg2);border:1px solid var(--rule);padding:1.4rem}
+.audio-card h3{font-size:1.4rem;color:var(--heading);margin:0 0 .3rem;line-height:1.3}
+.audio-card .meta{font-size:.75rem;letter-spacing:.04em;margin:0 0 1rem}
+.audio-card iframe{display:block;width:100%;border:0}
+.credit{font-size:.7rem;margin:.5rem 0 0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.credit a{text-decoration:none}
+.audio-note{margin-top:1.5rem;font-size:.85rem;font-style:italic}
+.audio-note a{color:var(--heading)}
 
-    /* ─────────────────────────────
-       NAV
-    ───────────────────────────── */
-    nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-      padding: 28px 36px 0;
-      position: relative;
-      z-index: 10;
-      background: var(--areia);
-    }
-    .nav-logo {
-      font-family: 'Caveat', cursive;
-      font-size: 42px;
-      font-weight: 700;
-      color: var(--azul);
-      line-height: 1;
-      text-decoration: none;
-      display: block;
-      transform: rotate(-1.5deg);
-    }
-    .nav-logo span { display: block; }
-    .nav-links {
-      display: flex;
-      gap: 32px;
-      padding-top: 10px;
-    }
-    .nav-links a {
-      font-size: 13px;
-      font-weight: 400;
-      color: var(--azul);
-      text-decoration: none;
-      letter-spacing: 0.06em;
-      text-transform: lowercase;
-    }
-    .nav-links a:hover { text-decoration: underline; }
+/* SUPPORT / DANA: text left, amount buttons and pay buttons right */
+#support{background:var(--bg2)}
+.dana-grid{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center}
+.dana-left .pt{font-style:italic;font-size:.85rem;opacity:.85}
+.dana-right{display:flex;flex-direction:column;gap:.8rem}
+.dana-amounts{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:.5rem}
+.dana-amt{padding:.55rem 1.3rem;border:1px solid var(--rule);background:transparent;color:var(--text);font:inherit;font-size:.85rem;cursor:pointer;transition:all .2s}
+.dana-amt:hover,.dana-amt.active{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+.btn-stripe{display:block;text-align:center;width:100%}
+.btn-paypal{display:block;width:100%;padding:.8rem 1.6rem;background:transparent;border:1px solid var(--rule);color:var(--text);font:inherit;font-size:.85rem;cursor:pointer;transition:all .2s}
+.btn-paypal:hover{border-color:var(--accent);color:var(--heading)}
+.dana-note{font-size:.72rem;text-align:center;margin:0;opacity:.8}
 
-    /* ─────────────────────────────
-       HERO
-    ───────────────────────────── */
-    .hero {
-      background: var(--areia);
-      padding: 20px 36px 0;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 0;
-      min-height: 440px;
-      position: relative;
-      overflow: hidden;
-    }
-    .hero-left {
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-end;
-      padding-bottom: 48px;
-      position: relative;
-      z-index: 2;
-    }
-    .hero-tagline {
-      font-family: 'Cormorant Garamond', Georgia, serif;
-      font-size: clamp(13px, 2vw, 15px);
-      font-weight: 300;
-      font-style: italic;
-      color: var(--verde);
-      letter-spacing: 0.08em;
-      margin-bottom: 12px;
-      text-transform: lowercase;
-    }
-    .hero-sub {
-      font-family: 'DM Sans', sans-serif;
-      font-size: 13px;
-      font-weight: 300;
-      color: var(--azul);
-      max-width: 280px;
-      line-height: 1.8;
-      margin-top: 20px;
-    }
-    .hero-sub-pt {
-      font-style: italic;
-      color: var(--verde);
-      font-size: 12px;
-      margin-top: 6px;
-    }
-    .hero-cta {
-      margin-top: 28px;
-      display: inline-block;
-      background: var(--azul);
-      color: var(--areia-light);
-      text-decoration: none;
-      padding: 11px 28px;
-      font-size: 12px;
-      letter-spacing: 0.08em;
-      text-transform: lowercase;
-      border: none;
-      cursor: pointer;
-      font-family: 'DM Sans', sans-serif;
-      transition: background 0.2s;
-    }
-    .hero-cta:hover { background: var(--terra); }
-    .hero-right {
-      position: relative;
-      display: flex;
-      align-items: flex-start;
-      justify-content: flex-end;
-      padding-top: 10px;
-    }
-    /* Tilted photo frame like Garden+Gather */
-    .hero-frame {
-      width: 88%;
-      aspect-ratio: 4/3;
-      background: var(--verde);
-      position: relative;
-      transform: rotate(1.2deg);
-      overflow: hidden;
-      box-shadow: 6px 8px 32px rgba(40,55,74,0.18);
-    }
-    /* Placeholder — replace with real photo */
-    .hero-frame-inner {
-      width: 100%; height: 100%;
-      background: linear-gradient(145deg, var(--verde) 0%, var(--azul) 100%);
-      display: flex; align-items: center; justify-content: center;
-      flex-direction: column; gap: 8px;
-    }
-    .hero-frame-inner p {
-      font-size: 11px; color: rgba(211,199,173,0.6);
-      text-align: center; padding: 0 20px; line-height: 1.6;
-      font-style: italic;
-    }
+footer{background:var(--bg2);padding:4.5rem 1.5rem 2.5rem;border-top:1px solid var(--rule)}
+footer h3{font-size:1.7rem;color:var(--heading);margin:0 0 .5rem}
+footer h3::after{content:"";display:block;width:64px;height:4px;background:var(--rule);margin-top:.5rem}
+.note{font-style:italic;font-size:.9rem;margin:1rem 0 1.5rem}
+.fields{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-bottom:1.5rem}
+label{display:block;font-family:Montserrat,sans-serif;font-weight:600;font-size:.72rem;letter-spacing:.04em;color:var(--label);margin-bottom:.4rem}
+label span{color:#C00}
+input{width:100%;padding:.85rem 1rem;border:1px solid var(--field-line);border-radius:3px;background:var(--field);color:var(--text);font:inherit;font-size:.95rem}
+.cols{display:grid;grid-template-columns:1fr 1fr 1fr;gap:3rem;margin-top:3.5rem;padding-top:2.5rem;border-top:1px solid var(--rule)}
+.cols h4{font-family:"Bebas Neue",Impact,sans-serif;font-weight:400;font-size:1.3rem;letter-spacing:.05em;text-transform:uppercase;color:var(--nav);margin:0 0 .8rem}
+footer ul{list-style:none;margin:0;padding:0}
+footer li{margin-bottom:.4rem}
+footer li a{color:var(--text);text-decoration:none}
+footer li a:hover{color:var(--heading)}
+.copy{font-size:.8rem;text-align:center;margin:3rem 0 0}
 
-    /* Decorative botanical SVG doodles */
-    .deco { position: absolute; pointer-events: none; }
-    .deco-tl { top: 60px; left: 30px; opacity: 0.25; }
-    .deco-br { bottom: 20px; right: 20px; opacity: 0.2; }
-    .deco-mid { top: 50%; left: 42%; opacity: 0.15; transform: translateY(-50%); }
-
-    /* Vertical rotated text (like "adults & children" in Garden+Gather) */
-    .rotated-text {
-      position: absolute;
-      right: -48px;
-      top: 50%;
-      transform: translateY(-50%) rotate(90deg);
-      font-size: 10px;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      color: var(--verde);
-      white-space: nowrap;
-    }
-
-    /* ─────────────────────────────
-       BLOCK SECTION — Terra (like pink block in G+G)
-    ───────────────────────────── */
-    .block-terra {
-      background: var(--terra);
-      padding: 64px 36px;
-      text-align: center;
-      position: relative;
-      overflow: hidden;
-    }
-    .block-terra h2 {
-      font-family: 'Cormorant Garamond', Georgia, serif;
-      font-size: clamp(30px, 6vw, 52px);
-      font-weight: 300;
-      color: var(--areia-light);
-      line-height: 1.2;
-      margin-bottom: 8px;
-    }
-    .block-terra h2 em {
-      font-style: italic;
-      display: block;
-      text-decoration: underline;
-      text-decoration-color: rgba(211,199,173,0.4);
-      text-underline-offset: 6px;
-    }
-    .block-terra p {
-      font-size: 13px;
-      color: rgba(234,227,212,0.75);
-      max-width: 380px;
-      margin: 20px auto 0;
-      line-height: 1.8;
-    }
-    /* Doodle decorations in terra block */
-    .deco-terra-l { position: absolute; left: 20px; top: 50%; transform: translateY(-50%); opacity: 0.2; }
-    .deco-terra-r { position: absolute; right: 20px; top: 50%; transform: translateY(-50%); opacity: 0.2; }
-
-    /* Sign-up pill button like G+G */
-    .pill-btn {
-      display: inline-block;
-      width: 64px; height: 64px;
-      border-radius: 50%;
-      background: var(--azul);
-      color: var(--areia-light);
-      font-size: 10px;
-      text-transform: lowercase;
-      letter-spacing: 0.06em;
-      text-align: center;
-      line-height: 1.3;
-      display: flex; align-items: center; justify-content: center;
-      text-decoration: none;
-      position: absolute;
-      left: 36px; top: 36px;
-      font-family: 'DM Sans', sans-serif;
-      font-weight: 500;
-    }
-    .pill-btn:hover { background: var(--verde); }
-
-    /* ─────────────────────────────
-       SPLIT SECTION — Bio + image (like avocado split in G+G)
-    ───────────────────────────── */
-    .split {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-    }
-    .split-left {
-      background: var(--azul);
-      padding: 56px 40px;
-      position: relative;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 380px;
-    }
-    /* Photo placeholder for bio */
-    .bio-photo {
-      width: 100%; max-width: 300px;
-      aspect-ratio: 3/4;
-      background: linear-gradient(160deg, var(--azul-light) 0%, var(--verde) 100%);
-      display: flex; align-items: center; justify-content: center;
-      flex-direction: column; gap: 10px;
-    }
-    .bio-photo p { font-size: 11px; color: rgba(211,199,173,0.5); text-align: center; padding: 0 16px; font-style: italic; }
-    .split-right {
-      background: var(--areia);
-      padding: 56px 44px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      position: relative;
-    }
-    .section-label {
-      font-size: 10px;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      color: var(--terra);
-      font-weight: 500;
-      margin-bottom: 12px;
-    }
-    .split-right h2 {
-      font-family: 'Caveat', cursive;
-      font-size: 38px;
-      font-weight: 600;
-      color: var(--azul);
-      line-height: 1.1;
-      margin-bottom: 20px;
-    }
-    .split-right p {
-      font-size: 13px;
-      color: var(--verde);
-      line-height: 1.85;
-      margin-bottom: 14px;
-    }
-    .bio-tags {
-      display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px;
-    }
-    .bio-tag {
-      font-size: 11px;
-      padding: 4px 14px;
-      border: 0.5px solid var(--verde);
-      color: var(--verde);
-      border-radius: 0;
-      background: transparent;
-      text-transform: lowercase;
-      letter-spacing: 0.04em;
-    }
-    /* Rotated side label */
-    .side-label {
-      position: absolute;
-      right: -38px; top: 50%;
-      transform: translateY(-50%) rotate(90deg);
-      font-size: 9px;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      color: var(--areia);
-      white-space: nowrap;
-      font-weight: 500;
-    }
-
-    /* ─────────────────────────────
-       AUDIO SECTION — Verde bg
-    ───────────────────────────── */
-    .audio-section {
-      background: var(--verde);
-      padding: 64px 36px;
-      position: relative;
-    }
-    .audio-section .section-label { color: var(--areia); }
-    .audio-section h2 {
-      font-family: 'Cormorant Garamond', Georgia, serif;
-      font-size: clamp(26px, 4vw, 38px);
-      font-weight: 300;
-      font-style: italic;
-      color: var(--areia-light);
-      margin-bottom: 32px;
-    }
-    .audio-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 16px;
-    }
-    .audio-card {
-      background: rgba(40,55,74,0.35);
-      border: 0.5px solid rgba(211,199,173,0.2);
-      padding: 20px;
-    }
-    .audio-card h3 {
-      font-family: 'Cormorant Garamond', Georgia, serif;
-      font-size: 17px;
-      font-weight: 400;
-      color: var(--areia-light);
-      margin-bottom: 4px;
-      line-height: 1.4;
-    }
-    .audio-card .meta {
-      font-size: 11px;
-      color: rgba(211,199,173,0.55);
-      margin-bottom: 14px;
-      letter-spacing: 0.04em;
-    }
-    .audio-bar-wrap {
-      background: rgba(211,199,173,0.15);
-      height: 3px;
-      margin-bottom: 12px;
-      position: relative;
-    }
-    .audio-bar-fill {
-      background: var(--areia);
-      width: 35%; height: 100%;
-    }
-    .audio-controls {
-      display: flex; align-items: center; gap: 10px;
-    }
-    .play-btn {
-      width: 32px; height: 32px; border-radius: 50%;
-      background: var(--terra);
-      border: none; cursor: pointer;
-      display: flex; align-items: center; justify-content: center;
-      flex-shrink: 0;
-    }
-    .play-icon {
-      width: 0; height: 0;
-      border-top: 5px solid transparent;
-      border-bottom: 5px solid transparent;
-      border-left: 9px solid var(--areia-light);
-      margin-left: 2px;
-    }
-    .audio-time { font-size: 11px; color: rgba(211,199,173,0.55); }
-    .audio-note {
-      margin-top: 24px;
-      font-size: 12px;
-      color: rgba(211,199,173,0.55);
-      font-style: italic;
-    }
-    .audio-note a { color: var(--areia); }
-
-    /* ─────────────────────────────
-       DANA SECTION — Azul dark (like footer block in G+G)
-    ───────────────────────────── */
-    .dana-section {
-      background: var(--azul);
-      padding: 72px 36px;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 48px;
-      align-items: center;
-      position: relative;
-    }
-    .dana-left .section-label { color: var(--terra-light); }
-    .dana-left h2 {
-      font-family: 'Caveat', cursive;
-      font-size: 44px;
-      font-weight: 600;
-      color: var(--areia-light);
-      line-height: 1.1;
-      margin-bottom: 16px;
-    }
-    .dana-left p {
-      font-size: 13px;
-      color: rgba(211,199,173,0.65);
-      line-height: 1.85;
-      margin-bottom: 8px;
-    }
-    .dana-left .pt {
-      font-style: italic;
-      font-size: 12px;
-      color: rgba(211,199,173,0.45);
-    }
-    .dana-right {
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-    }
-    .dana-amounts {
-      display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 8px;
-    }
-    .dana-amt {
-      padding: 9px 20px;
-      border: 0.5px solid rgba(211,199,173,0.35);
-      color: var(--areia);
-      background: transparent;
-      font-size: 13px;
-      cursor: pointer;
-      font-family: 'DM Sans', sans-serif;
-      transition: all 0.2s;
-    }
-    .dana-amt:hover, .dana-amt.active {
-      background: var(--terra);
-      border-color: var(--terra);
-    }
-    .btn-stripe {
-      display: block;
-      background: var(--terra);
-      color: var(--areia-light);
-      text-align: center;
-      text-decoration: none;
-      padding: 14px 28px;
-      font-size: 13px;
-      font-family: 'DM Sans', sans-serif;
-      font-weight: 500;
-      letter-spacing: 0.04em;
-      text-transform: lowercase;
-      border: none;
-      cursor: pointer;
-      transition: background 0.2s;
-    }
-    .btn-stripe:hover { background: var(--terra-light); }
-    .btn-paypal {
-      display: flex; align-items: center; justify-content: center; gap: 8px;
-      background: transparent;
-      border: 0.5px solid rgba(211,199,173,0.35);
-      color: var(--areia);
-      text-align: center;
-      text-decoration: none;
-      padding: 12px 28px;
-      font-size: 13px;
-      font-family: 'DM Sans', sans-serif;
-      cursor: pointer;
-      transition: all 0.2s;
-    }
-    .btn-paypal:hover { border-color: var(--areia); }
-    .dana-note {
-      font-size: 11px;
-      color: rgba(211,199,173,0.35);
-      text-align: center;
-      line-height: 1.6;
-    }
-
-    /* ─────────────────────────────
-       FOOTER — Cream band then Azul
-    ───────────────────────────── */
-    .footer-band {
-      background: var(--areia-light);
-      padding: 40px 36px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    .footer-name {
-      font-family: 'Caveat', cursive;
-      font-size: 52px;
-      font-weight: 700;
-      color: var(--azul);
-      text-align: center;
-      letter-spacing: 0.01em;
-    }
-    footer {
-      background: var(--azul);
-      padding: 28px 36px;
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
-      text-align: center;
-    }
-    footer h4 {
-      font-size: 10px;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      color: var(--areia);
-      margin-bottom: 10px;
-      font-weight: 500;
-    }
-    footer a, footer p {
-      display: block;
-      font-size: 12px;
-      color: rgba(211,199,173,0.55);
-      text-decoration: none;
-      line-height: 1.8;
-    }
-    footer a:hover { color: var(--areia); }
-    .footer-dividers {
-      border-left: 0.5px solid rgba(211,199,173,0.15);
-      border-right: 0.5px solid rgba(211,199,173,0.15);
-    }
-
-    /* ─────────────────────────────
-       RESPONSIVE
-    ───────────────────────────── */
-    @media (max-width: 640px) {
-      nav { flex-direction: column; gap: 12px; padding: 20px 20px 0; }
-      .nav-logo { font-size: 34px; }
-      .hero { grid-template-columns: 1fr; padding: 16px 20px 0; }
-      .hero-right { justify-content: center; padding-bottom: 32px; }
-      .hero-frame { width: 100%; transform: rotate(0.8deg); }
-      .rotated-text { display: none; }
-      .block-terra { padding: 48px 20px; }
-      .split { grid-template-columns: 1fr; }
-      .split-left { min-height: 260px; }
-      .side-label { display: none; }
-      .audio-grid { grid-template-columns: 1fr; }
-      .dana-section { grid-template-columns: 1fr; padding: 48px 20px; }
-      footer { grid-template-columns: 1fr; }
-      .footer-dividers { border: none; border-top: 0.5px solid rgba(211,199,173,0.15); border-bottom: 0.5px solid rgba(211,199,173,0.15); padding: 20px 0; }
-    }
-
-    /* ─────────────────────────────
-       ANIMATIONS
-    ───────────────────────────── */
-    .fade-in { opacity: 0; transform: translateY(18px); transition: opacity 0.65s ease, transform 0.65s ease; }
-    .fade-in.visible { opacity: 1; transform: translateY(0); }
-  </style>
+@media(max-width:760px){
+  .split,.cols,.fields,.audio-grid,.dana-grid{grid-template-columns:1fr}
+  section{padding:3.5rem 1.25rem}
+  .split{gap:2rem}
+}
+</style>
 </head>
-
 <body>
 
-  <!-- ── NAV ── -->
-  <nav>
-    <a href="#" class="nav-logo">
-      <span>Beth</span>
-      <span>Faria</span>
-    </a>
-    <div class="nav-links">
-      <a href="#bio">about</a>
-      <a href="#audio">teachings</a>
-      <a href="#dana">donate</a>
-    </div>
-  </nav>
-
-  <!-- ── HERO ── -->
-  <section class="hero" aria-label="Introduction">
-
-    <!-- Botanical doodle — top left -->
-    <svg class="deco deco-tl" width="60" height="120" viewBox="0 0 60 120" fill="none" aria-hidden="true">
-      <line x1="30" y1="120" x2="30" y2="10" stroke="#28374A" stroke-width="1"/>
-      <ellipse cx="30" cy="10" rx="10" ry="16" stroke="#28374A" stroke-width="1" fill="none"/>
-      <ellipse cx="16" cy="40" rx="8" ry="13" stroke="#28374A" stroke-width="1" fill="none" transform="rotate(-25 16 40)"/>
-      <ellipse cx="44" cy="55" rx="8" ry="13" stroke="#28374A" stroke-width="1" fill="none" transform="rotate(25 44 55)"/>
-      <ellipse cx="16" cy="75" rx="7" ry="11" stroke="#28374A" stroke-width="1" fill="none" transform="rotate(-20 16 75)"/>
-    </svg>
-
-    <div class="hero-left fade-in">
-      <div class="hero-tagline">theravada · vipassana · sydney &amp; online</div>
-      <p class="hero-sub">
-        Meditation teachings rooted in the ancient tradition — offered with warmth, clarity, and an open heart to practitioners in Australia, Brazil, and beyond.
-      </p>
-      <p class="hero-sub-pt">Ensinamentos oferecidos com calor e coração aberto.</p>
-      <a href="#audio" class="hero-cta">listen to a teaching ↓</a>
-    </div>
-
-    <div class="hero-right fade-in">
-      <div class="hero-frame">
-        <div class="hero-frame-inner">
-          <!--
-            ✏️  ADD PHOTO:
-            Replace this entire div with:
-            <img src="hero-photo.jpg" alt="Beth Faria in meditation" style="width:100%;height:100%;object-fit:cover;">
-          -->
-          <svg width="48" height="48" viewBox="0 0 52 52" fill="none" aria-hidden="true">
-            <ellipse cx="26" cy="36" rx="6" ry="10" fill="#D3C7AD" opacity="0.4"/>
-            <ellipse cx="26" cy="36" rx="6" ry="10" fill="#D3C7AD" opacity="0.4" transform="rotate(60 26 36)"/>
-            <ellipse cx="26" cy="36" rx="6" ry="10" fill="#D3C7AD" opacity="0.4" transform="rotate(120 26 36)"/>
-            <ellipse cx="26" cy="36" rx="6" ry="10" fill="#D3C7AD" opacity="0.4" transform="rotate(180 26 36)"/>
-            <ellipse cx="26" cy="36" rx="6" ry="10" fill="#D3C7AD" opacity="0.4" transform="rotate(240 26 36)"/>
-            <ellipse cx="26" cy="36" rx="6" ry="10" fill="#D3C7AD" opacity="0.4" transform="rotate(300 26 36)"/>
-            <circle cx="26" cy="26" r="5" fill="#D3C7AD" opacity="0.6"/>
-          </svg>
-          <p>add a photograph of Beth here — portrait or nature scene</p>
-        </div>
-      </div>
-      <span class="rotated-text">dharma teacher</span>
-    </div>
-
-    <!-- Bottom-right doodle -->
-    <svg class="deco deco-br" width="48" height="80" viewBox="0 0 48 80" fill="none" aria-hidden="true">
-      <line x1="24" y1="80" x2="24" y2="30" stroke="#28374A" stroke-width="1"/>
-      <circle cx="24" cy="20" r="10" stroke="#28374A" stroke-width="1" fill="none"/>
-      <circle cx="24" cy="20" r="4" stroke="#28374A" stroke-width="0.5" fill="none"/>
-      <line x1="24" y1="10" x2="24" y2="4" stroke="#28374A" stroke-width="1"/>
-      <line x1="15" y1="20" x2="10" y2="20" stroke="#28374A" stroke-width="1"/>
-      <line x1="33" y1="20" x2="38" y2="20" stroke="#28374A" stroke-width="1"/>
-    </svg>
-
-  </section>
-
-  <!-- ── TERRA BLOCK (like the pink "workshops" block in G+G) ── -->
-  <div class="block-terra fade-in" aria-label="Teachings intro">
-
-    <!-- Small circular link top-left -->
-    <a href="#dana" class="pill-btn">dana ↗</a>
-
-    <!-- Decorative lotus left -->
-    <svg class="deco-terra-l" width="36" height="100" viewBox="0 0 36 100" fill="none" aria-hidden="true">
-      <line x1="18" y1="100" x2="18" y2="20" stroke="#EAE3D4" stroke-width="1"/>
-      <ellipse cx="18" cy="12" rx="8" ry="12" fill="none" stroke="#EAE3D4" stroke-width="1"/>
-      <ellipse cx="6" cy="40" rx="6" ry="10" fill="none" stroke="#EAE3D4" stroke-width="1" transform="rotate(-20 6 40)"/>
-      <ellipse cx="30" cy="55" rx="6" ry="10" fill="none" stroke="#EAE3D4" stroke-width="1" transform="rotate(20 30 55)"/>
-    </svg>
-
-    <h2>
-      meditation<br>
-      <em>and dharma</em><br>
-      for all beings
-    </h2>
-    <p>Teachings in English and Portuguese · Online and in Sydney · Open to all</p>
-
-    <!-- Decorative right -->
-    <svg class="deco-terra-r" width="36" height="100" viewBox="0 0 36 100" fill="none" aria-hidden="true">
-      <line x1="18" y1="100" x2="18" y2="20" stroke="#EAE3D4" stroke-width="1"/>
-      <ellipse cx="18" cy="12" rx="8" ry="12" fill="none" stroke="#EAE3D4" stroke-width="1"/>
-      <ellipse cx="6" cy="45" rx="6" ry="10" fill="none" stroke="#EAE3D4" stroke-width="1" transform="rotate(-20 6 45)"/>
-      <ellipse cx="30" cy="60" rx="6" ry="10" fill="none" stroke="#EAE3D4" stroke-width="1" transform="rotate(20 30 60)"/>
-    </svg>
-
+<!-- 1. HERO -->
+<section id="home">
+  <div class="wrap">
+    <h1>Meditation and dharma for all beings</h1>
+    <a class="btn" href="#audio">Listen to a teaching &darr;</a>
   </div>
+</section>
 
-  <!-- ── SPLIT — Bio (like avocado / text split in G+G) ── -->
-  <div class="split" id="bio" aria-label="About Beth">
-
-    <div class="split-left">
-      <div class="bio-photo">
-        <!--
-          ✏️  ADD PHOTO:
-          Replace entire bio-photo div with:
-          <img src="beth-portrait.jpg" alt="Beth Faria" style="width:100%;max-width:300px;height:400px;object-fit:cover;">
-        -->
-        <svg width="48" height="48" viewBox="0 0 52 52" fill="none" aria-hidden="true">
-          <ellipse cx="26" cy="36" rx="6" ry="10" fill="#D3C7AD" opacity="0.3"/>
-          <ellipse cx="26" cy="36" rx="6" ry="10" fill="#D3C7AD" opacity="0.3" transform="rotate(72 26 36)"/>
-          <ellipse cx="26" cy="36" rx="6" ry="10" fill="#D3C7AD" opacity="0.3" transform="rotate(144 26 36)"/>
-          <ellipse cx="26" cy="36" rx="6" ry="10" fill="#D3C7AD" opacity="0.3" transform="rotate(216 26 36)"/>
-          <ellipse cx="26" cy="36" rx="6" ry="10" fill="#D3C7AD" opacity="0.3" transform="rotate(288 26 36)"/>
-          <circle cx="26" cy="26" r="5" fill="#D3C7AD" opacity="0.5"/>
-        </svg>
-        <p>add portrait photo here</p>
-      </div>
-      <span class="side-label">theravada tradition</span>
-    </div>
-
-    <div class="split-right fade-in">
-      <div class="section-label">about beth</div>
-      <h2>practitioner,<br>teacher,<br>traveller of<br>the path</h2>
-
-      <!--
-        ✏️  EDIT: replace with Beth's real biography
-      -->
-      <p>Elizabeth Faria has offered Insight Dialogue and silent meditation retreats in Brazil, China, Europe, and Australia since 2013. She has studied with Gregory Kramer and the Insight Dialogue Teaching Community since 2008. </p>
-      <p>She began practicing vipassana on long retreats in 1996, taking a two-year break from work to dedicate time to meditation practice in India, the US, Australia, and Thailand. </p>
-      <p>Elizabeth is a graduate of the Australian Association of Buddhist Counsellors and Psychotherapists Professional Training Course in Buddhism and Psychotherapy. </p>
+<!-- 2. ABOUT -->
+<section id="about">
+  <div class="wrap split">
+    <div>
+      <div class="section-label">About Beth</div>
+      <h2>Practitioner, teacher, traveller of the path</h2>
+      <p>Elizabeth Faria has offered Insight Dialogue and silent meditation retreats in Brazil, China, Europe, and Australia since 2013. She has studied with Gregory Kramer and the Insight Dialogue Teaching Community since 2008.</p>
+      <p>She began practicing vipassana on long retreats in 1996, taking a two-year break from work to dedicate time to meditation practice in India, the US, Australia, and Thailand.</p>
+      <p>Elizabeth is a graduate of the Australian Association of Buddhist Counsellors and Psychotherapists Professional Training Course in Buddhism and Psychotherapy.</p>
       <p>She has worked as a psychotherapist and psychologist for more than 30 years and has long been interested in the integration of the Buddhadharma with neuroscience and psychotherapy. Elizabeth lives in New South Wales, Australia.</p>
       <p><em>Beth também ensina em português — para praticantes no Brasil e em Portugal.</em></p>
-
-      <div class="bio-tags">
-        <span class="bio-tag">vipassana</span>
-        <span class="bio-tag">mettā</span>
-        <span class="bio-tag">theravada</span>
-        <span class="bio-tag">sydney</span>
-        <span class="bio-tag">en · pt</span>
-      </div>
     </div>
-
+    <div class="img" role="img" aria-label="Portrait placeholder">Portrait photo</div>
   </div>
+</section>
 
- <!-- ── AUDIO ── -->
-  <section class="audio-section fade-in" id="audio" aria-label="Dharma talks">
-    <div class="section-label">teachings</div>
+<!-- 3. AUDIO (replace each SoundCloud iframe with your own: SoundCloud > track > Share > Embed > copy code) -->
+<section id="audio" class="fade-in" aria-label="Audio">
+  <div class="wrap">
+    <div class="section-label">Teachings</div>
     <h2>Listen to a dharma talk</h2>
 
     <div class="audio-grid">
-
       <!-- CARD 1 -->
       <div class="audio-card">
-        <h3>Metta Bhavana </h3>
-        <p class="meta">Beth Faria · Meditação guiada · 37 min </p>
-        <!--
-          ✏️  REPLACE with real SoundCloud embed:
-          Go to soundcloud.com → your track → Share → Embed → copy iframe → paste here
-        -->
-        <iframe width="100%" height="20" scrolling="no" frameborder="no" allow="autoplay; encrypted-media" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%253Atracks%253A1222146850&color=%23ff5500&inverse=false&auto_play=false&show_user=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/beth-faria-989357083" title="Elizabeth faria" target="_blank" style="color: #cccccc; text-decoration: none;">Elizabeth faria</a> · <a href="https://soundcloud.com/beth-faria-989357083/metta-bhavana" title="Metta-Bhavana" target="_blank" style="color: #cccccc; text-decoration: none;">Metta-Bhavana</a></div>
+        <h3>Metta Bhavana</h3>
+        <p class="meta">Beth Faria &middot; Meditação guiada &middot; 37 min</p>
+        <iframe title="Metta Bhavana" height="20" scrolling="no" allow="autoplay; encrypted-media"
+          src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%253Atracks%253A1222146850&color=%23A26C58&inverse=false&auto_play=false&show_user=true"></iframe>
+        <p class="credit"><a href="https://soundcloud.com/beth-faria-989357083" target="_blank" rel="noopener">Elizabeth Faria</a> &middot; <a href="https://soundcloud.com/beth-faria-989357083/metta-bhavana" target="_blank" rel="noopener">Metta-Bhavana</a></p>
       </div>
-
       <!-- CARD 2 -->
       <div class="audio-card">
-        <h3>Lendo o sutra conselhos para Rāhula —MN61</h3>
-        <p class="meta">Beth Faria · 15 min </p>
-        <!--
-          ✏️  REPLACE with second SoundCloud embed
-        -->
-       <iframe width="100%" height="20" scrolling="no" frameborder="no" allow="autoplay; encrypted-media" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%253Atracks%253A2290235444&color=%23ff5500&inverse=false&auto_play=false&show_user=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/beth-faria-989357083" title="Elizabeth faria" target="_blank" style="color: #cccccc; text-decoration: none;">Elizabeth faria</a> · <a href="https://soundcloud.com/beth-faria-989357083/mn-61-conselhos-para-ra-hula" title="MN 61 - Conselhos para Rāhula" target="_blank" style="color: #cccccc; text-decoration: none;">MN 61 - Conselhos para Rāhula</a></div>
+        <h3>Lendo o sutra conselhos para Rāhula — MN61</h3>
+        <p class="meta">Beth Faria &middot; 15 min</p>
+        <iframe title="MN 61 - Conselhos para Rāhula" height="20" scrolling="no" allow="autoplay; encrypted-media"
+          src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%253Atracks%253A2290235444&color=%23A26C58&inverse=false&auto_play=false&show_user=true"></iframe>
+        <p class="credit"><a href="https://soundcloud.com/beth-faria-989357083" target="_blank" rel="noopener">Elizabeth Faria</a> &middot; <a href="https://soundcloud.com/beth-faria-989357083/mn-61-conselhos-para-ra-hula" target="_blank" rel="noopener">MN 61 - Conselhos para Rāhula</a></p>
       </div>
-
     </div>
 
-    <p class="audio-note">
-      More talks on
-      <a href="https://soundcloud.com/beth-faria-989357083" target="_blank" rel="noopener">Beth Faria SoundCloud ↗</a>
-      — updated regularly.
-    </p>
-  </section>
+    <p class="audio-note">More talks on <a href="https://soundcloud.com/beth-faria-989357083" target="_blank" rel="noopener">Beth Faria SoundCloud &#8599;</a> &mdash; updated regularly.</p>
+  </div>
+</section>
 
-
-  <!-- ── DANA ── -->
-  <section class="dana-section fade-in" id="dana" aria-label="Donate">
+<!-- 4. SUPPORT / DONATION -->
+<section id="support" class="fade-in" aria-label="Support">
+  <div class="wrap dana-grid">
 
     <div class="dana-left">
-      <div class="section-label">dana · generosity</div>
-      <h2>the dharma<br>is offered<br>freely</h2>
+      <div class="section-label">Dana &middot; generosity</div>
+      <h2>The dharma is offered freely</h2>
       <p>These teachings are given in the spirit of dana — the ancient practice of generosity. If you have received something of value, your support sustains the path.</p>
       <p class="pt">Os ensinamentos são oferecidos no espírito do dana. Seu apoio sustenta o caminho.</p>
     </div>
 
     <div class="dana-right">
       <div class="dana-amounts">
-        <button class="dana-amt" onclick="selectAmt(this)">A$10</button>
-        <button class="dana-amt active" onclick="selectAmt(this)">A$25</button>
-        <button class="dana-amt" onclick="selectAmt(this)">A$50</button>
-        <button class="dana-amt" onclick="selectAmt(this)">A$100</button>
-        <button class="dana-amt" onclick="selectAmt(this)">other</button>
+        <button type="button" class="dana-amt" onclick="selectAmt(this)">A$10</button>
+        <button type="button" class="dana-amt active" onclick="selectAmt(this)">A$25</button>
+        <button type="button" class="dana-amt" onclick="selectAmt(this)">A$50</button>
+        <button type="button" class="dana-amt" onclick="selectAmt(this)">A$100</button>
+        <button type="button" class="dana-amt" onclick="selectAmt(this)">other</button>
       </div>
 
-    
-      <!--
-        ✏️  STRIPE: replace href with your Stripe Payment Link
-        Get it at: dashboard.stripe.com → Payment Links → Create
-        Set product name "Dana", allow custom amount, currency AUD
-      -->
-      <a href="https://buy.stripe.com/YOUR_LINK_HERE" target="_blank" rel="noopener" class="btn-stripe">
-        ♡ &nbsp; offer dana by card
-      </a>
-
-      <!--
-        ✏️  PAYPAL: replace value="beth@email.com" with Beth's PayPal email
-      -->
-      <form action="https://www.paypal.com/donate" method="post" target="_blank">
-        <input type="hidden" name="business" value="beth@email.com" />
-        <input type="hidden" name="currency_code" value="AUD" />
-        <input type="hidden" name="item_name" value="Dana — dharma teaching offering" />
-        <input type="hidden" name="no_recurring" value="0" />
-        <button type="submit" class="btn-paypal">pay with paypal</button>
-      </form>
-
-      <p class="dana-note">Secure payment · AUD, BRL, USD, HKD · Credit cards accepted</p>
+      <p class="dana-note">Secure payment &middot; AUD, BRL, USD, HKD &middot; Credit cards accepted</p>
     </div>
-
-    <div>
-        <script src='https://storage.ko-fi.com/cdn/scripts/overlay-widget.js'></script>
-<script>
-  kofiWidgetOverlay.draw('elizabethfaria', {
-    'type': 'floating-chat',
-    'floating-chat.donateButton.text': 'Support me',
-    'floating-chat.donateButton.background-color': '#00b9fe',
-    'floating-chat.donateButton.text-color': '#fff'
-  });
-</script>
-    </div>
-  </section>
-
-  <!-- ── FOOTER NAME BAND (like G+G cream footer) ── -->
-  <div class="footer-band">
-    <div class="footer-name">Beth Faria</div>
   </div>
 
-  <!-- ── FOOTER ── -->
-  <footer>
-    <div>
-      <h4>find her</h4>
-      <p>Sydney, Australia</p>
-      <a href="https://instagram.com/bethfaria" target="_blank" rel="noopener">Instagram</a>
-      <a href="https://soundcloud.com/bethfaria" target="_blank" rel="noopener">SoundCloud</a>
-    </div>
-    <div class="footer-dividers">
-      <h4>connect</h4>
-      <a href="mailto:hello@bethfaria.com">hello@bethfaria.com</a>
-      <a href="https://wa.me/61XXXXXXXXX" target="_blank" rel="noopener">WhatsApp</a>
-    </div>
-    <div>
-      <h4>follow</h4>
-      <a href="#audio">teachings</a>
-      <a href="#dana">donate</a>
-      <a href="#bio">about</a>
-    </div>
-  </footer>
-
+  <!-- KO-FI floating button: Ko-fi username is set to elizabethfaria; change if needed -->
+  <script src="https://storage.ko-fi.com/cdn/scripts/overlay-widget.js"></script>
   <script>
-    /* Dana amount toggle */
-    function selectAmt(btn) {
-      document.querySelectorAll('.dana-amt').forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
+    if (typeof kofiWidgetOverlay !== 'undefined') {
+      kofiWidgetOverlay.draw('elizabethfaria', {
+        'type': 'floating-chat',
+        'floating-chat.donateButton.text': 'Support me',
+        'floating-chat.donateButton.background-color': '#A26C58',
+        'floating-chat.donateButton.text-color': '#fff'
+      });
     }
-
-    /* Scroll fade-in */
-    const io = new IntersectionObserver(entries => {
-      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
-    }, { threshold: 0.1 });
-    document.querySelectorAll('.fade-in').forEach(el => io.observe(el));
   </script>
+</section>
 
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <h3>Subscribe</h3>
+    <p class="note">Sign up with your email to receive news and updates. We never spam you or hand your information to third parties.</p>
+       <!-- Connect this form to your email service (Mailchimp, Kit, etc.) by setting action="" -->
+    <form onsubmit="event.preventDefault();this.querySelector('button').textContent='Thank you'">
+      <div class="fields">
+        <div><label for="fn">First name <span>*</span></label><input id="fn" name="first_name" type="text" required></div>
+        <div><label for="ln">Last name <span>*</span></label><input id="ln" name="last_name" type="text" required></div>
+        <div><label for="em">Email <span>*</span></label><input id="em" name="email" type="email" required></div>
+      </div>
+      <div class="fields two">
+        <div>
+          <label for="lang">Language <small>(optional)</small></label>
+          <select id="lang" name="language">
+            <option value="">Select language</option>
+            <option value="en">English</option>
+            <option value="pt-BR">Português (Brasil)</option>
+          </select>
+        </div>
+        <div>
+          <label for="country">Country <small>(optional)</small></label>
+          <!-- Click the field and start typing a country name to jump to it -->
+          <select id="country" name="country">
+            <option value="">Select country</option>
+            <option>Afghanistan</option>
+            <option>Albania</option>
+            <option>Algeria</option>
+            <option>Andorra</option>
+            <option>Angola</option>
+            <option>Antigua and Barbuda</option>
+            <option>Argentina</option>
+            <option>Armenia</option>
+            <option>Australia</option>
+            <option>Austria</option>
+            <option>Azerbaijan</option>
+            <option>Bahamas</option>
+            <option>Bahrain</option>
+            <option>Bangladesh</option>
+            <option>Barbados</option>
+            <option>Belarus</option>
+            <option>Belgium</option>
+            <option>Belize</option>
+            <option>Benin</option>
+            <option>Bhutan</option>
+            <option>Bolivia</option>
+            <option>Bosnia and Herzegovina</option>
+            <option>Botswana</option>
+            <option>Brazil</option>
+            <option>Brunei</option>
+            <option>Bulgaria</option>
+            <option>Burkina Faso</option>
+            <option>Burundi</option>
+            <option>Cabo Verde</option>
+            <option>Cambodia</option>
+            <option>Cameroon</option>
+            <option>Canada</option>
+            <option>Central African Republic</option>
+            <option>Chad</option>
+            <option>Chile</option>
+            <option>China</option>
+            <option>Colombia</option>
+            <option>Comoros</option>
+            <option>Congo (Democratic Republic)</option>
+            <option>Congo (Republic)</option>
+            <option>Costa Rica</option>
+            <option>Côte d&#39;Ivoire</option>
+            <option>Croatia</option>
+            <option>Cuba</option>
+            <option>Cyprus</option>
+            <option>Czechia</option>
+            <option>Denmark</option>
+            <option>Djibouti</option>
+            <option>Dominica</option>
+            <option>Dominican Republic</option>
+            <option>Ecuador</option>
+            <option>Egypt</option>
+            <option>El Salvador</option>
+            <option>Equatorial Guinea</option>
+            <option>Eritrea</option>
+            <option>Estonia</option>
+            <option>Eswatini</option>
+            <option>Ethiopia</option>
+            <option>Fiji</option>
+            <option>Finland</option>
+            <option>France</option>
+            <option>Gabon</option>
+            <option>Gambia</option>
+            <option>Georgia</option>
+            <option>Germany</option>
+            <option>Ghana</option>
+            <option>Greece</option>
+            <option>Grenada</option>
+            <option>Guatemala</option>
+            <option>Guinea</option>
+            <option>Guinea-Bissau</option>
+            <option>Guyana</option>
+            <option>Haiti</option>
+            <option>Honduras</option>
+            <option>Hong Kong</option>
+            <option>Hungary</option>
+            <option>Iceland</option>
+            <option>India</option>
+            <option>Indonesia</option>
+            <option>Iran</option>
+            <option>Iraq</option>
+            <option>Ireland</option>
+            <option>Israel</option>
+            <option>Italy</option>
+            <option>Jamaica</option>
+            <option>Japan</option>
+            <option>Jordan</option>
+            <option>Kazakhstan</option>
+            <option>Kenya</option>
+            <option>Kiribati</option>
+            <option>Kosovo</option>
+            <option>Kuwait</option>
+            <option>Kyrgyzstan</option>
+            <option>Laos</option>
+            <option>Latvia</option>
+            <option>Lebanon</option>
+            <option>Lesotho</option>
+            <option>Liberia</option>
+            <option>Libya</option>
+            <option>Liechtenstein</option>
+            <option>Lithuania</option>
+            <option>Luxembourg</option>
+            <option>Macau</option>
+            <option>Madagascar</option>
+            <option>Malawi</option>
+            <option>Malaysia</option>
+            <option>Maldives</option>
+            <option>Mali</option>
+            <option>Malta</option>
+            <option>Marshall Islands</option>
+            <option>Mauritania</option>
+            <option>Mauritius</option>
+            <option>Mexico</option>
+            <option>Micronesia</option>
+            <option>Moldova</option>
+            <option>Monaco</option>
+            <option>Mongolia</option>
+            <option>Montenegro</option>
+            <option>Morocco</option>
+            <option>Mozambique</option>
+            <option>Myanmar</option>
+            <option>Namibia</option>
+            <option>Nauru</option>
+            <option>Nepal</option>
+            <option>Netherlands</option>
+            <option>New Zealand</option>
+            <option>Nicaragua</option>
+            <option>Niger</option>
+            <option>Nigeria</option>
+            <option>North Korea</option>
+            <option>North Macedonia</option>
+            <option>Norway</option>
+            <option>Oman</option>
+            <option>Pakistan</option>
+            <option>Palau</option>
+            <option>Palestine</option>
+            <option>Panama</option>
+            <option>Papua New Guinea</option>
+            <option>Paraguay</option>
+            <option>Peru</option>
+            <option>Philippines</option>
+            <option>Poland</option>
+            <option>Portugal</option>
+            <option>Puerto Rico</option>
+            <option>Qatar</option>
+            <option>Romania</option>
+            <option>Russia</option>
+            <option>Rwanda</option>
+            <option>Saint Kitts and Nevis</option>
+            <option>Saint Lucia</option>
+            <option>Saint Vincent and the Grenadines</option>
+            <option>Samoa</option>
+            <option>San Marino</option>
+            <option>São Tomé and Príncipe</option>
+            <option>Saudi Arabia</option>
+            <option>Senegal</option>
+            <option>Serbia</option>
+            <option>Seychelles</option>
+            <option>Sierra Leone</option>
+            <option>Singapore</option>
+            <option>Slovakia</option>
+            <option>Slovenia</option>
+            <option>Solomon Islands</option>
+            <option>Somalia</option>
+            <option>South Africa</option>
+            <option>South Korea</option>
+            <option>South Sudan</option>
+            <option>Spain</option>
+            <option>Sri Lanka</option>
+            <option>Sudan</option>
+            <option>Suriname</option>
+            <option>Sweden</option>
+            <option>Switzerland</option>
+            <option>Syria</option>
+            <option>Taiwan</option>
+            <option>Tajikistan</option>
+            <option>Tanzania</option>
+            <option>Thailand</option>
+            <option>Timor-Leste</option>
+            <option>Togo</option>
+            <option>Tonga</option>
+            <option>Trinidad and Tobago</option>
+            <option>Tunisia</option>
+            <option>Türkiye</option>
+            <option>Turkmenistan</option>
+            <option>Tuvalu</option>
+            <option>Uganda</option>
+            <option>Ukraine</option>
+            <option>United Arab Emirates</option>
+            <option>United Kingdom</option>
+            <option>United States</option>
+            <option>Uruguay</option>
+            <option>Uzbekistan</option>
+            <option>Vanuatu</option>
+            <option>Vatican City</option>
+            <option>Venezuela</option>
+            <option>Vietnam</option>
+            <option>Yemen</option>
+            <option>Zambia</option>
+            <option>Zimbabwe</option>
+          </select>
+        </div>
+      </div>
+      <button class="btn" type="submit">Subscribe</button>
+    </form>
+
+    <div class="cols">
+      <div>
+        <h4>Find her</h4>
+        <ul>
+          <li>Sydney, Australia & Brazil</li>
+          <li><a href="https://soundcloud.com/beth-faria-989357083" target="_blank" rel="noopener">SoundCloud</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Connect</h4>
+        <ul>
+          <li><a href="mailto:bethfaria0@gmail.com">bethfaria0@gmail.com</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Navigate</h4>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#audio">Teachings</a></li>
+          <li><a href="#support">Donate</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="copy">&copy; 2026 Elizabeth Faria. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+  /* Donation amount toggle */
+  function selectAmt(btn){
+    document.querySelectorAll('.dana-amt').forEach(function(b){b.classList.remove('active')});
+    btn.classList.add('active');
+  }
+  /* Scroll fade-in */
+  var els=document.querySelectorAll('.fade-in');
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(entries){
+      entries.forEach(function(e){if(e.isIntersecting)e.target.classList.add('visible')});
+    },{threshold:0.1});
+    els.forEach(function(el){io.observe(el)});
+  } else { els.forEach(function(el){el.classList.add('visible')}); }
+</script>
 </body>
 </html>
