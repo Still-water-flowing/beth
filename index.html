@@ -4,7 +4,6 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Beth Faria — Dharma Teacher | Vipassana &amp; Theravada</title>
-
  <!-- SEO -->
 <meta name="description" content="Beth Faria teaches meditation and dharma in the Theravada tradition. Retreats in Sydney, online sessions for Brazil. English and Portuguese.">
  <meta name="keywords" content="Beth Faria, dharma teacher, vipassana, Theravada, meditation Sydney, meditação, retiro online Brasil" />
@@ -12,22 +11,17 @@
 <meta property="og:description" content="Meditation teachings rooted in the Theravada tradition — offered with warmth, clarity, and an open heart.">
 <meta property="og:type" content="website">
 
+
+<meta name="description" content="Beth Faria teaches meditation and dharma in the Theravada tradition. Retreats in Sydney, online sessions for Brazil. English and Portuguese.">
+<meta property="og:title" content="Beth Faria — Dharma Teacher">
+<meta property="og:description" content="Meditation teachings rooted in the Theravada tradition — offered with warmth, clarity, and an open heart.">
+<meta property="og:type" content="website">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@0,400;0,500;0,600;1,400&display=swap">
 <style>
 :root{
-  --bg:#F6F6F3; /* Main page background (About and Audio sections) */
-  --bg2:#EFE6DF; /* Support section and footer background */
-  --hero:#0B1D1F; /* Top hero section background */
-  --hero-ink:#EAEAE6;/* Text colour of the hero headline */
-  --text:#86675A; /* Body text, footer links and text typed into form fields */
-  --heading:#A26C58; /*  */
-  --label:#6E534B; /*  */
-  --nav:#EFE6DF;/*  */
-  --accent:#A26C58; /*  */
-  --accent-ink:#FFFFFF; /*  */
-  --rule:#CFB5A6; /*  */
-  --field:#FFFFFF; /*  */
-  --field-line:#D0C5BA;/*  */
+  --bg:#F6F6F3; --bg2:#EFE6DF; --hero:#0B1D1F; --hero-ink:#EAEAE6;
+  --text:#86675A; --heading:#A26C58; --label:#6E534B; --nav:#656053;
+  --accent:#A26C58; --accent-ink:#FFFFFF; --rule:#CFB5A6; --field:#FFFFFF; --field-line:#D0C5BA;
   box-sizing:border-box; padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
 }
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
@@ -37,19 +31,32 @@
   --bg:#1D1B19; --bg2:#262321; --text:#CDB8AD; --heading:#D49A85; --label:#CDB8AD; --nav:#B8B3A6;
   --accent:#D49A85; --accent-ink:#1D1B19; --rule:#6E534B; --field:#1D1B19; --field-line:#4A403A;}
 *,*::before,*::after{box-sizing:inherit}
-html{scroll-behavior:smooth;scroll-padding-top:env(safe-area-inset-top,0px)}
+html{scroll-behavior:smooth;scroll-padding-top:calc(env(safe-area-inset-top,0px) + 80px)}
 body{margin:0;background:var(--bg);color:var(--text);font:400 1.05rem/1.75 Montserrat,system-ui,sans-serif}
 h1,h2,h3,.btn,label{font-family:"Bebas Neue",Impact,"Arial Narrow",sans-serif;font-weight:400;text-transform:uppercase;letter-spacing:.03em}
-h1{font-size:clamp(2.6rem,7vw,4.6rem);line-height:1.05;margin:0;max-width:16ch;color:var(--hero-ink)}
+h1{font-size:clamp(2.6rem,7vw,4.6rem);line-height:1.05;margin:0;max-width:20ch;color:var(--hero-ink)}
 h2{font-size:clamp(2rem,4.5vw,2.8rem);line-height:1.1;margin:0 0 1.5rem;color:var(--heading)}
 h2::after{content:"";display:block;width:128px;height:4px;background:var(--rule);margin-top:.7rem}
 .center{text-align:center}.center h2::after{margin-left:auto;margin-right:auto}
+.h-pt{color:var(--text);opacity:.75}
+.h-pt::before{content:" / "}
+h1 .h-pt{display:block;color:var(--hero-ink);opacity:.65;font-size:.5em;margin-top:.8rem}
+h1 .h-pt::before{content:none}
 p{margin:0 0 1.1rem}
 a{color:inherit}
 section{padding:5rem 1.5rem}
 .wrap{max-width:1040px;margin:0 auto}
 .btn{display:inline-block;padding:.65rem 1.6rem;background:var(--accent);color:var(--accent-ink);text-decoration:none;font-size:1.25rem;border:0;border-radius:3px;cursor:pointer;line-height:1.4}
 .btn:hover{opacity:.88}
+
+/* TOP NAVIGATION */
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--bg);z-index:101}
+.site-nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:100;background:var(--bg);border-bottom:1px solid var(--rule);
+  display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:1rem 1.5rem}
+.nav-logo{font-family:"Bebas Neue",Impact,sans-serif;font-size:1.7rem;letter-spacing:.06em;text-transform:uppercase;text-decoration:none;color:var(--heading);line-height:1}
+.nav-links{display:flex;gap:2rem}
+.nav-links a{font-family:"Bebas Neue",Impact,sans-serif;font-size:1.2rem;letter-spacing:.06em;text-transform:uppercase;text-decoration:none;color:var(--nav);transition:color .2s}
+.nav-links a:hover{color:var(--heading)}
 
 #home{background:var(--hero);min-height:70vh;display:flex;align-items:center;text-align:center}
 #home .wrap{display:flex;flex-direction:column;align-items:center;gap:2rem}
@@ -93,8 +100,15 @@ footer h3::after{content:"";display:block;width:64px;height:4px;background:var(-
 .fields{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-bottom:1.5rem}
 label{display:block;font-family:Montserrat,sans-serif;font-weight:600;font-size:.72rem;letter-spacing:.04em;color:var(--label);margin-bottom:.4rem}
 label span{color:#C00}
-input{width:100%;padding:.85rem 1rem;border:1px solid var(--field-line);border-radius:3px;background:var(--field);color:var(--text);font:inherit;font-size:.95rem}
-.cols{display:grid;grid-template-columns:1fr 1fr 1fr;gap:3rem;margin-top:3.5rem;padding-top:2.5rem;border-top:1px solid var(--rule)}
+label small{font-family:Montserrat,sans-serif;font-weight:400;font-size:.72rem;letter-spacing:0;text-transform:none;color:var(--text);opacity:.8}
+.fields.two{grid-template-columns:repeat(2,1fr)}
+textarea{min-height:150px;resize:vertical;line-height:1.6}
+.connect{margin-top:4rem}
+select{appearance:none;-webkit-appearance:none;cursor:pointer;padding-right:2.5rem;
+  background-image:linear-gradient(45deg,transparent 50%,var(--text) 50%),linear-gradient(135deg,var(--text) 50%,transparent 50%);
+  background-position:calc(100% - 20px) 50%,calc(100% - 14px) 50%;background-size:6px 6px,6px 6px;background-repeat:no-repeat}
+input,select,textarea{width:100%;padding:.85rem 1rem;border:1px solid var(--field-line);border-radius:3px;background:var(--field);color:var(--text);font:inherit;font-size:.95rem}
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:3rem;margin-top:3.5rem;padding-top:2.5rem;border-top:1px solid var(--rule)}
 .cols h4{font-family:"Bebas Neue",Impact,sans-serif;font-weight:400;font-size:1.3rem;letter-spacing:.05em;text-transform:uppercase;color:var(--nav);margin:0 0 .8rem}
 footer ul{list-style:none;margin:0;padding:0}
 footer li{margin-bottom:.4rem}
@@ -103,18 +117,32 @@ footer li a:hover{color:var(--heading)}
 .copy{font-size:.8rem;text-align:center;margin:3rem 0 0}
 
 @media(max-width:760px){
-  .split,.cols,.fields,.audio-grid,.dana-grid{grid-template-columns:1fr}
+  .split,.cols,.fields,.fields.two,.audio-grid,.dana-grid{grid-template-columns:1fr}
   section{padding:3.5rem 1.25rem}
+  html{scroll-padding-top:calc(env(safe-area-inset-top,0px) + 100px)}
+  .site-nav{flex-direction:column;gap:.5rem;padding:.8rem 1rem}
+  .nav-links{gap:1.4rem}
   .split{gap:2rem}
 }
 </style>
 </head>
 <body>
 
+<!-- TOP NAVIGATION -->
+<header class="site-nav">
+  <a class="nav-logo" href="#home">Beth Faria</a>
+  <nav class="nav-links" aria-label="Main">
+    <a href="#about">About</a>
+    <a href="#audio">Teachings</a>
+    <a href="#support">Donate</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
 <!-- 1. HERO -->
 <section id="home">
   <div class="wrap">
-    <h1>Meditation and dharma for all beings</h1>
+    <h1>Meditation and dharma for all beings <span class="h-pt">Meditação e dharma para todos os seres</span></h1>
     <a class="btn" href="#audio">Listen to a teaching &darr;</a>
   </div>
 </section>
@@ -123,8 +151,8 @@ footer li a:hover{color:var(--heading)}
 <section id="about">
   <div class="wrap split">
     <div>
-      <div class="section-label">About Beth</div>
-      <h2>Practitioner, teacher, traveller of the path</h2>
+      <div class="section-label">About Beth <span class="h-pt">Sobre a Beth</span></div>
+      <h2>Practitioner, teacher, traveller of the path <span class="h-pt">Praticante, professora, viajante do caminho</span></h2>
       <p>Elizabeth Faria has offered Insight Dialogue and silent meditation retreats in Brazil, China, Europe, and Australia since 2013. She has studied with Gregory Kramer and the Insight Dialogue Teaching Community since 2008.</p>
       <p>She began practicing vipassana on long retreats in 1996, taking a two-year break from work to dedicate time to meditation practice in India, the US, Australia, and Thailand.</p>
       <p>Elizabeth is a graduate of the Australian Association of Buddhist Counsellors and Psychotherapists Professional Training Course in Buddhism and Psychotherapy.</p>
@@ -138,8 +166,8 @@ footer li a:hover{color:var(--heading)}
 <!-- 3. AUDIO (replace each SoundCloud iframe with your own: SoundCloud > track > Share > Embed > copy code) -->
 <section id="audio" class="fade-in" aria-label="Audio">
   <div class="wrap">
-    <div class="section-label">Teachings</div>
-    <h2>Listen to a dharma talk</h2>
+    <div class="section-label">Teachings <span class="h-pt">Ensinamentos</span></div>
+    <h2>Listen to a dharma talk <span class="h-pt">Ouça uma palestra de dharma</span></h2>
 
     <div class="audio-grid">
       <!-- CARD 1 -->
@@ -169,22 +197,17 @@ footer li a:hover{color:var(--heading)}
   <div class="wrap dana-grid">
 
     <div class="dana-left">
-      <div class="section-label">Dana &middot; generosity</div>
-      <h2>The dharma is offered freely</h2>
+      <div class="section-label">Dana &middot; generosity <span class="h-pt">Dana &middot; generosidade</span></div>
+      <h2>The dharma is offered freely <span class="h-pt">O dharma é oferecido gratuitamente</span></h2>
       <p>These teachings are given in the spirit of dana — the ancient practice of generosity. If you have received something of value, your support sustains the path.</p>
       <p class="pt">Os ensinamentos são oferecidos no espírito do dana. Seu apoio sustenta o caminho.</p>
     </div>
 
     <div class="dana-right">
-      <div class="dana-amounts">
-        <button type="button" class="dana-amt" onclick="selectAmt(this)">A$10</button>
-        <button type="button" class="dana-amt active" onclick="selectAmt(this)">A$25</button>
-        <button type="button" class="dana-amt" onclick="selectAmt(this)">A$50</button>
-        <button type="button" class="dana-amt" onclick="selectAmt(this)">A$100</button>
-        <button type="button" class="dana-amt" onclick="selectAmt(this)">other</button>
-      </div>
+     <!-- KO-FI: main payment link -->
+      <a href="https://ko-fi.com/elizabethfaria" target="_blank" rel="noopener" class="btn btn-pay">&#9825; &nbsp;Offer dana on Ko-fi</a>
 
-      <p class="dana-note">Secure payment &middot; AUD, BRL, USD, HKD &middot; Credit cards accepted</p>
+      <p class="dana-note">Secure payment through Ko-fi &middot; Credit cards and PayPal accepted</p>
     </div>
   </div>
 
@@ -205,9 +228,9 @@ footer li a:hover{color:var(--heading)}
 <!-- FOOTER -->
 <footer>
   <div class="wrap">
-    <h3>Subscribe</h3>
-    <p class="note">Sign up with your email to receive news and updates. We never spam you or hand your information to third parties.</p>
-       <!-- Connect this form to your email service (Mailchimp, Kit, etc.) by setting action="" -->
+    <h3>Subscribe <span class="h-pt">Inscreva-se</span></h3>
+    <p class="note">Sign up with your email to receive news and updates.</p>
+    <!-- Connect this form to your email service (Mailchimp, Kit, etc.) by setting action="" -->
     <form onsubmit="event.preventDefault();this.querySelector('button').textContent='Thank you'">
       <div class="fields">
         <div><label for="fn">First name <span>*</span></label><input id="fn" name="first_name" type="text" required></div>
@@ -436,20 +459,14 @@ footer li a:hover{color:var(--heading)}
 
     <div class="cols">
       <div>
-        <h4>Find her</h4>
+        <h4>Find her <span class="h-pt">Encontre-a</span></h4>
         <ul>
-          <li>Sydney, Australia & Brazil</li>
+          <li>Australia & Brazil </li>
           <li><a href="https://soundcloud.com/beth-faria-989357083" target="_blank" rel="noopener">SoundCloud</a></li>
         </ul>
       </div>
       <div>
-        <h4>Connect</h4>
-        <ul>
-          <li><a href="mailto:bethfaria0@gmail.com">bethfaria0@gmail.com</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4>Navigate</h4>
+        <h4>Navigate <span class="h-pt">Navegar</span></h4>
         <ul>
           <li><a href="#home">Home</a></li>
           <li><a href="#about">About</a></li>
@@ -458,7 +475,7 @@ footer li a:hover{color:var(--heading)}
         </ul>
       </div>
     </div>
-    <p class="copy">&copy; 2026 Elizabeth Faria. All rights reserved.</p>
+    <p class="copy">&copy; 2026 Beth Faria. All rights reserved.</p>
   </div>
 </footer>
 
@@ -476,6 +493,16 @@ footer li a:hover{color:var(--heading)}
     },{threshold:0.1});
     els.forEach(function(el){io.observe(el)});
   } else { els.forEach(function(el){el.classList.add('visible')}); }
+  /* Connect form: opens email app until a Formspree ID is added */
+  var cf=document.getElementById('connect-form');
+  if(cf){cf.addEventListener('submit',function(e){
+    if((cf.getAttribute('action')||'').indexOf('YOUR_FORM_ID')>-1){
+      e.preventDefault();
+      var f=cf.elements;
+      location.href='mailto:hello@bethfaria.com?subject='+encodeURIComponent(f['subject'].value)+
+        '&body='+encodeURIComponent(f['message'].value+'\n\n— '+f['email'].value);
+    }
+  });}
 </script>
 </body>
 </html>
