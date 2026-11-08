@@ -457,6 +457,26 @@ footer li a:hover{color:var(--heading)}
       <button class="btn" type="submit">Subscribe</button>
     </form>
 
+<!-- CONNECT: message form -->
+    <div class="connect" id="contact">
+      <h3>Connect <span class="h-pt">Conecte-se</span></h3>
+      <p class="note">Send a message and it will go straight to her inbox. <span lang="pt-BR">Envie uma mensagem diretamente para ela.</span></p>
+      <!-- To send for real: create a free form at formspree.io, then replace YOUR_FORM_ID below with your form ID.
+           Until then, the button opens the visitor's email app with the message pre-filled. -->
+      <form id="connect-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+        <div class="fields two">
+          <div><label for="c-email">Your email <span>*</span></label><input id="c-email" name="email" type="email" required></div>
+          <div><label for="c-title">Title <span>*</span></label><input id="c-title" name="subject" type="text" required></div>
+        </div>
+        <div style="margin-bottom:1.5rem">
+          <label for="c-msg">Message <span>*</span></label>
+          <textarea id="c-msg" name="message" required></textarea>
+        </div>
+        <button class="btn" type="submit">Send</button>
+      </form>
+    </div>
+
+   
     <div class="cols">
       <div>
         <h4>Find her <span class="h-pt">Encontre-a</span></h4>
