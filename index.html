@@ -62,7 +62,7 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 #home .wrap{display:flex;flex-direction:column;align-items:center;gap:2rem}
 
 .split{display:grid;grid-template-columns:1fr 1fr;gap:3.5rem;align-items:center}
-.img{aspect-ratio:4/5;border-radius:3px;background:linear-gradient(135deg,var(--rule),var(--bg2));display:flex;align-items:center;justify-content:center;font-size:.9rem;opacity:.9}
+.img{display:block;width:100%;aspect-ratio:4/5;object-fit:contain;object-position:center;margin:0 auto;border-radius:3px}
 
 .section-label{font-family:Montserrat,sans-serif;font-size:.72rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--label);margin-bottom:.8rem}
 .fade-in{opacity:0;transform:translateY(18px);transition:opacity .65s ease,transform .65s ease}
@@ -159,7 +159,7 @@ footer li a:hover{color:var(--heading)}
       <p>She has worked as a psychotherapist and psychologist for more than 30 years and has long been interested in the integration of the Buddhadharma with neuroscience and psychotherapy. Elizabeth lives in New South Wales, Australia.</p>
       <p><em>Beth também ensina em português — para praticantes no Brasil e em Portugal.</em></p>
     </div>
-    <div class="img" role="img" aria-label="Portrait placeholder">Portrait photo</div>
+    <img class="img" src="images/beth.png" alt="Beth Faria">
   </div>
 </section>
 
